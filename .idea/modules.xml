@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/cloudsim-plus-Grad-Project.iml" filepath="$PROJECT_DIR$/cloudsim-plus-Grad-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloudsim-plus-Graduation-Project.iml" filepath="$PROJECT_DIR$/cloudsim-plus-Graduation-Project.iml" />
     </modules>
   </component>
 </project>
