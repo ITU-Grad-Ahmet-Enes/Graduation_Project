@@ -1,3 +1,0 @@
-# There is not requirements.
-# The file is added just to informe snyk.io that there is not 
-# dependencies for the ReadTheDocs project.
