@@ -35,7 +35,7 @@ import java.util.List;
  * @author Manoel Campos da Silva Filho
  * @since CloudSim Plus 1.0
  */
-public interface Datacenter extends SimEntity, PowerAware, TimeZoned {
+public interface Datacenter extends SimEntity, PowerAware, TimeZoned, GeoLocation {
     Logger LOGGER = LoggerFactory.getLogger(Datacenter.class.getSimpleName());
 
     /**

@@ -13,6 +13,7 @@ import org.cloudbus.cloudsim.core.AbstractMachine;
 import org.cloudbus.cloudsim.core.CustomerEntity;
 import org.cloudbus.cloudsim.core.UniquelyIdentifiable;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
 import org.cloudbus.cloudsim.datacenters.TimeZoned;
 import org.cloudbus.cloudsim.hosts.Host;
 import org.cloudbus.cloudsim.resources.*;
@@ -41,7 +42,7 @@ import java.util.function.Predicate;
  * @author Manoel Campos da Silva Filho
  * @since CloudSim Plus 1.0
  */
-public interface Vm extends AbstractMachine, UniquelyIdentifiable, Comparable<Vm>, CustomerEntity, TimeZoned {
+public interface Vm extends AbstractMachine, UniquelyIdentifiable, Comparable<Vm>, CustomerEntity, TimeZoned, GeoLocation {
     Logger LOGGER = LoggerFactory.getLogger(Vm.class.getSimpleName());
 
     /**
