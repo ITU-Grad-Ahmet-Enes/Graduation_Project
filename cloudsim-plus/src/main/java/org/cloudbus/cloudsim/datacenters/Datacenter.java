@@ -37,8 +37,8 @@ import java.util.List;
  */
 public interface Datacenter extends SimEntity, PowerAware, TimeZoned, GeoLocation {
 
-    boolean working();
-    void workingUpdate(boolean status);
+    boolean getOnOff();
+    void setOnOff(boolean status);
     int getDatacenterCapacity();
     void setDatacenterCapacity(int datacenterCapacity);
     int getCurrentCapacity();

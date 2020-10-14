@@ -46,18 +46,18 @@ import static java.util.stream.Collectors.toList;
  */
 public class DatacenterSimple extends CloudSimEntity implements Datacenter {
 
-    private boolean status = true;
+    private boolean OnOff = true;
     private int datacenterCapacity = 1;
-    private int currentCapacity = 0;
+    private int currentUsage = 0;
 
     @Override
     public int getCurrentCapacity() {
-        return currentCapacity;
+        return currentUsage;
     }
 
     @Override
     public void increaseCurrentCapacity() {
-        currentCapacity++;
+        currentUsage++;
     }
 
     @Override
@@ -72,13 +72,13 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
 
 
     @Override
-    public boolean working() {
-        return status;
+    public boolean getOnOff() {
+        return OnOff;
     }
 
     @Override
-    public void workingUpdate(boolean status) {
-        this.status = status;
+    public void setOnOff(boolean OnOff) {
+        this.OnOff = OnOff;
     }
 
     /**

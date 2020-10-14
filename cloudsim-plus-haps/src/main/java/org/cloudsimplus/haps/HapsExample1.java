@@ -42,10 +42,8 @@ public class HapsExample1 {
      * User locations to user
      */
 
-
     private static final ArrayList<Location> locationsDatacenter= new ArrayList<>();
     private static final ArrayList<Location> locationsVms= new ArrayList<>();
-
 
     private static final int VM_PES = 4;
 
@@ -111,7 +109,6 @@ public class HapsExample1 {
         vmList = createVms();
         cloudletList = createCloudlets();
 
-
 		/*Enables the selection of the closest datacenter for every VM,
         then submits Vms and Cloudlets.*/
         broker0.setSelectClosestDatacenter(true).submitVmList(vmList).submitCloudletList(cloudletList);
@@ -131,7 +128,6 @@ public class HapsExample1 {
                 .addColumn(2, new TextTableColumn("   DC    ", "RangeToVM"), this::getDistanceVmtoDc)
                 .addColumn(3, new TextTableColumn("  Latency ", "VM_to_DC"), this::getLatencyVm)
                 .build();
-
 
     }
 
@@ -156,8 +152,6 @@ public class HapsExample1 {
         return String.format("%.2f", GeoLocation.distance(vm.getHost().getDatacenter().getLocation(), vm.getLocation())) + "km";
     }
 
-
-
     /**
      * Creates a List of Datacenters, each Datacenter having
      * Hosts with a number of PEs higher than the previous Datacenter.
@@ -167,7 +161,6 @@ public class HapsExample1 {
         for (int i=0; i<locationsDatacenter.size(); i++) {
             final Datacenter dc = createDatacenter();
             dc.setLocation(locationsDatacenter.get(i));
-
 
             list.add(dc);
       }
@@ -193,7 +186,7 @@ public class HapsExample1 {
 
         //List of Host's CPUs (Processing Elements, PEs)
         for(int i=0; i<HOST_PES; i++) {
-            peList.add(new PeSimple(1000));
+            peList.add(new PeSimple(10000));
         }
 
         final long ram = 2048;

@@ -1,6 +1,5 @@
 package org.cloudbus.cloudsim.datacenters;
 
-import org.apache.commons.lang3.ObjectUtils;
 import org.cloudbus.cloudsim.vms.Vm;
 
 import java.util.List;
@@ -35,7 +34,7 @@ public interface GeoLocation {
         Datacenter currentDc = Datacenter.NULL, closestDc = currentDc;
         while (it.hasNext()) {
             currentDc = it.next();
-            if (!currentDc.working()) {
+            if (!currentDc.getOnOff()) {
                 continue;
             } else if(currentDc.getCurrentCapacity() == currentDc.getDatacenterCapacity()) {
                 continue;

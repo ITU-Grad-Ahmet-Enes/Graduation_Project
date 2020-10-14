@@ -3,7 +3,6 @@ package org.cloudsimplus.haps;
 import ch.qos.logback.classic.Level;
 import org.cloudbus.cloudsim.brokers.DatacenterBroker;
 import org.cloudbus.cloudsim.brokers.DatacenterBrokerHAPSPolicy;
-import org.cloudbus.cloudsim.brokers.DatacenterBrokerSimple;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 import org.cloudbus.cloudsim.core.CloudSim;
@@ -15,7 +14,6 @@ import org.cloudbus.cloudsim.resources.PeSimple;
 import org.cloudbus.cloudsim.utilizationmodels.UtilizationModelDynamic;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudbus.cloudsim.vms.VmSimple;
-import org.cloudsimplus.builders.tables.CloudletsTableBuilder;
 import org.cloudsimplus.builders.tables.TextTableColumn;
 import org.cloudsimplus.builders.tables.VmsTableBuilder;
 import org.cloudsimplus.util.Log;
@@ -147,7 +145,7 @@ public class HAPSProject {
             datacenterCount++;
         }
         System.out.println();
-        list.get(0).workingUpdate(false);
+        list.get(0).setOnOff(false);
         return list;
     }
 

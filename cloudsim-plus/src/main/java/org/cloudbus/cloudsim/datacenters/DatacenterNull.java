@@ -31,12 +31,12 @@ final class DatacenterNull implements Datacenter, SimEntityNullBase {
     }
 
     @Override
-    public boolean working() {
+    public boolean getOnOff() {
         return false;
     }
 
     @Override
-    public void workingUpdate(boolean status) {
+    public void setOnOff(boolean status) {
     }
 
     @Override
