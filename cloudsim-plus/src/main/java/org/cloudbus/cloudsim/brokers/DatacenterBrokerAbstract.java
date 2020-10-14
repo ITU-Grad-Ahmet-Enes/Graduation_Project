@@ -13,6 +13,7 @@ import org.cloudbus.cloudsim.core.*;
 import org.cloudbus.cloudsim.core.events.CloudSimEvent;
 import org.cloudbus.cloudsim.core.events.SimEvent;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
 import org.cloudbus.cloudsim.datacenters.TimeZoned;
 import org.cloudbus.cloudsim.schedulers.cloudlet.CloudletScheduler;
 import org.cloudbus.cloudsim.utilizationmodels.UtilizationModel;
@@ -1184,7 +1185,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
      * @see #setSelectClosestDatacenter(boolean)
      */
     protected Datacenter closestDatacenterMapper(final Datacenter lastDatacenter, final Vm vm) {
-        return TimeZoned.closestDatacenter(vm, getDatacenterList());
+        return GeoLocation.closestDatacenter(vm, getDatacenterList());
     }
 
     /**

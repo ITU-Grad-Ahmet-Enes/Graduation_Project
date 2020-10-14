@@ -3,7 +3,7 @@ package org.cloudbus.cloudsim.datacenters;
 public class Location {
     private Double x;
     private Double y;
-    private Double z=0.0;
+    private Double z;
 
     public Location() {}
 
