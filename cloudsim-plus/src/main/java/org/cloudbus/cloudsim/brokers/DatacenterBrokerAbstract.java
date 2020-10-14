@@ -124,7 +124,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
     /**
      * @see #getDatacenterList()
      */
-    private List<Datacenter> datacenterList;
+    protected List<Datacenter> datacenterList;
 
     private Cloudlet lastSubmittedCloudlet;
     private Vm lastSubmittedVm;
@@ -887,7 +887,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
      *         0 to indicate the request was not sent due to lack of available datacenter
      */
     private int requestVmCreation(final Datacenter datacenter, final boolean isFallbackDatacenter, final Vm vm) {
-        if (datacenter == Datacenter.NULL || datacenter.equals(vm.getLastTriedDatacenter())) {
+        if (datacenter == Datacenter.NULL || datacenter.equals(vm.getLastTriedDatacenter())  ) {
             return 0;
         }
 
@@ -1092,7 +1092,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
      *
      * @param datacenterList the new dc list
      */
-    private void setDatacenterList(final Set<Datacenter> datacenterList) {
+    protected void setDatacenterList(final Set<Datacenter> datacenterList) {
         this.datacenterList = new ArrayList<>(datacenterList);
         if(selectClosestDatacenter){
             this.datacenterList.sort(Comparator.comparingDouble(Datacenter::getTimeZone));

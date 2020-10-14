@@ -46,6 +46,41 @@ import static java.util.stream.Collectors.toList;
  */
 public class DatacenterSimple extends CloudSimEntity implements Datacenter {
 
+    private boolean status = true;
+    private int datacenterCapacity = 1;
+    private int currentCapacity = 0;
+
+    @Override
+    public int getCurrentCapacity() {
+        return currentCapacity;
+    }
+
+    @Override
+    public void increaseCurrentCapacity() {
+        currentCapacity++;
+    }
+
+    @Override
+    public int getDatacenterCapacity() {
+        return datacenterCapacity;
+    }
+    @Override
+    public void setDatacenterCapacity(int datacenterCapacity) {
+        this.datacenterCapacity = datacenterCapacity;
+    }
+
+
+
+    @Override
+    public boolean working() {
+        return status;
+    }
+
+    @Override
+    public void workingUpdate(boolean status) {
+        this.status = status;
+    }
+
     /**
      * The last time some Host on the Datacenter was under or overloaded.
      *
@@ -93,6 +128,7 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
      * @see #getTimeZone()
      */
     private double timeZone;
+    private Location location;
     private Map<Vm, Host> lastMigrationMap;
 
     /** @see #getHostSearchForMigrationDelay() */
@@ -831,6 +867,8 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
         return false;
     }
 
+
+
     @Override
     public void requestVmMigration(final Vm sourceVm, final Host targetHost) {
         final String currentTime = getSimulation().clockStr();
@@ -966,9 +1004,22 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
         return timeZone;
     }
 
+
+
     @Override
     public final Datacenter setTimeZone(final double timeZone) {
         this.timeZone = validateTimeZone(timeZone);
+        return this;
+    }
+
+    @Override
+    public Location getLocation() {
+        return location;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        this.location = location;
         return this;
     }
 
@@ -1142,4 +1193,6 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
         this.hostSearchForMigrationDelay = hostSearchDelay;
         return this;
     }
+
+
 }

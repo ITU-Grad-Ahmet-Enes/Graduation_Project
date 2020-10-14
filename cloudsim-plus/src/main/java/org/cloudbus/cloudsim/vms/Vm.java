@@ -14,6 +14,7 @@ import org.cloudbus.cloudsim.core.CustomerEntity;
 import org.cloudbus.cloudsim.core.UniquelyIdentifiable;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
 import org.cloudbus.cloudsim.datacenters.GeoLocation;
+import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.datacenters.TimeZoned;
 import org.cloudbus.cloudsim.hosts.Host;
 import org.cloudbus.cloudsim.resources.*;
@@ -44,6 +45,9 @@ import java.util.function.Predicate;
  */
 public interface Vm extends AbstractMachine, UniquelyIdentifiable, Comparable<Vm>, CustomerEntity, TimeZoned, GeoLocation {
     Logger LOGGER = LoggerFactory.getLogger(Vm.class.getSimpleName());
+
+    void setLatecny(final double number);
+    Double getLatecny();
 
     /**
      * An attribute that implements the Null Object Design Pattern for {@link Vm}

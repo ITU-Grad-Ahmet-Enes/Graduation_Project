@@ -4,6 +4,8 @@ import org.cloudbus.cloudsim.brokers.DatacenterBroker;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.Simulation;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
+import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.hosts.Host;
 import org.cloudbus.cloudsim.resources.Processor;
 import org.cloudbus.cloudsim.resources.Resource;
@@ -186,9 +188,30 @@ class VmNull implements Vm {
     @Override public VerticalVmScaling getBwVerticalScaling() { return VerticalVmScaling.NULL; }
     @Override public VerticalVmScaling getPeVerticalScaling() { return VerticalVmScaling.NULL; }
     @Override public Processor getProcessor() { return Processor.NULL; }
+
+    @Override
+    public void setLatecny(double number) {
+
+    }
+
+    @Override
+    public Double getLatecny() {
+        return null;
+    }
+
     @Override public String getDescription() { return ""; }
     @Override public Vm setDescription(String description) { return this; }
     @Override public VmGroup getGroup() { return null; }
     @Override public double getTimeZone() { return Integer.MAX_VALUE; }
     @Override public Vm setTimeZone(double timeZone) { return this; }
+
+    @Override
+    public Location getLocation() {
+        return null;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        return null;
+    }
 }

@@ -29,6 +29,36 @@ final class DatacenterNull implements Datacenter, SimEntityNullBase {
     @Override public VmAllocationPolicy getVmAllocationPolicy() {
         return VmAllocationPolicy.NULL;
     }
+
+    @Override
+    public boolean working() {
+        return false;
+    }
+
+    @Override
+    public void workingUpdate(boolean status) {
+    }
+
+    @Override
+    public int getDatacenterCapacity() {
+        return 0;
+    }
+
+    @Override
+    public void setDatacenterCapacity(int datacenterCapacity) {
+
+    }
+
+    @Override
+    public int getCurrentCapacity() {
+        return 0;
+    }
+
+    @Override
+    public void increaseCurrentCapacity() {
+
+    }
+
     @Override public void requestVmMigration(Vm sourceVm, Host targetHost) {/**/}
     @Override public Host getHost(final int index) { return Host.NULL; }
     @Override public long getActiveHostsNumber() { return 0; }
@@ -57,4 +87,14 @@ final class DatacenterNull implements Datacenter, SimEntityNullBase {
     @Override public String toString() { return "Datacenter.NULL"; }
     @Override public double getTimeZone() { return Integer.MAX_VALUE; }
     @Override public TimeZoned setTimeZone(double timeZone) { return this; }
+
+    @Override
+    public Location getLocation() {
+        return null;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        return null;
+    }
 }

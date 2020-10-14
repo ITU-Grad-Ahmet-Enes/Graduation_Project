@@ -25,6 +25,7 @@ package org.cloudsimplus.builders.tables;
 
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.Identifiable;
+import org.cloudbus.cloudsim.vms.Vm;
 
 import java.util.List;
 
@@ -71,7 +72,7 @@ public class CloudletsTableBuilder extends TableBuilderAbstract<Cloudlet> {
     protected void createTableColumns() {
         final String ID = "ID";
         addColumnDataFunction(getTable().addColumn("Cloudlet", ID), Identifiable::getId);
-        addColumnDataFunction(getTable().addColumn("Status "), cloudlet -> cloudlet.getStatus().name());
+        addColumnDataFunction(getTable().addColumn("Status "), cloudlet -> cloudlet.getStatus().name()); // bunu yazdıramadık
         addColumnDataFunction(getTable().addColumn("DC", ID), cloudlet -> cloudlet.getVm().getHost().getDatacenter().getId());
         addColumnDataFunction(getTable().addColumn("Host", ID), cloudlet -> cloudlet.getVm().getHost().getId());
         addColumnDataFunction(getTable().addColumn("Host PEs ", CPU_CORES), cloudlet -> cloudlet.getVm().getHost().getWorkingPesNumber());

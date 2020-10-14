@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/GeoLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudsimplus/builders/tables/VmsTableBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/HAPSProject.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/HAPSProject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/HAPSProject.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/HAPSProject.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerHAPSPolicy.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerHAPSPolicy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/Datacenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/Datacenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/DatacenterNull.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/DatacenterNull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/DatacenterSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/DatacenterSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/GeoLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/datacenters/GeoLocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/Vm.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/Vm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/VmNull.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/VmNull.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/VmSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/vms/VmSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudsimplus/builders/tables/CloudletsTableBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudsimplus/builders/tables/CloudletsTableBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerHAPSPolicy.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerHAPSPolicy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/Datacenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/Datacenter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/DatacenterNull.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/DatacenterNull.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/DatacenterSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/datacenters/DatacenterSimple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/Vm.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/Vm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/VmNull.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/VmNull.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/VmSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/vms/VmSimple.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudsimplus/builders/tables/CloudletsTableBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudsimplus/builders/tables/CloudletsTableBuilder.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +38,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -144,7 +165,11 @@
       <updated>1602591172983</updated>
       <workItem from="1602591174590" duration="1025000" />
       <workItem from="1602595920126" duration="315000" />
-      <workItem from="1602597076377" duration="1539000" />
+      <workItem from="1602597076377" duration="3114000" />
+      <workItem from="1602601541951" duration="4299000" />
+      <workItem from="1602609838124" duration="9003000" />
+      <workItem from="1602618905823" duration="6825000" />
+      <workItem from="1602660259212" duration="7140000" />
     </task>
     <servers />
   </component>
@@ -152,25 +177,78 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1602591535846">
+    <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser" timestamp="1602666380501">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602591535846" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1602592661616">
+    <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602660402558" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1602666380501" />
+    <state width="474" height="466" key="DebuggerActiveHint" timestamp="1602622054804">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602592661616" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1602592661616">
+    <state width="474" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602622054804" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1602667354291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602592661616" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1602592661616">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602663486950" />
+    <state width="1877" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602667354291" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center" timestamp="1602667354291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602592661616" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1602592661616">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602663486950" />
+    <state width="1877" height="264" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602667354291" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left" timestamp="1602667354290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602592661616" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602663486950" />
+    <state width="1877" height="264" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602667354290" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right" timestamp="1602667354291">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602663486950" />
+    <state width="1877" height="264" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602667354291" />
+    <state width="1877" height="353" key="GridCell.Tab.1.bottom" timestamp="1602625736611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="353" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602625736611" />
+    <state width="1877" height="353" key="GridCell.Tab.1.center" timestamp="1602625736611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="353" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602625736611" />
+    <state width="1877" height="353" key="GridCell.Tab.1.left" timestamp="1602625736611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="353" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602625736611" />
+    <state width="1877" height="353" key="GridCell.Tab.1.right" timestamp="1602625736611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="353" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602625736611" />
+    <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602621574623">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602621574623" />
+    <state x="2066" y="0" width="1471" height="718" maximized="true" key="dock-window-1" timestamp="1602667092296">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2066" y="0" width="1471" height="718" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602660486916" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.java</url>
+          <line>1095</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerAbstract.java</url>
+          <line>1186</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

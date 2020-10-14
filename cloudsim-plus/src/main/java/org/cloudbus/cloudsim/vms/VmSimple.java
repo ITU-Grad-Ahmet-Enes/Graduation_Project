@@ -12,6 +12,8 @@ import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.AbstractMachine;
 import org.cloudbus.cloudsim.core.CustomerEntityAbstract;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
+import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.hosts.Host;
 import org.cloudbus.cloudsim.resources.*;
 import org.cloudbus.cloudsim.schedulers.cloudlet.CloudletScheduler;
@@ -42,6 +44,18 @@ import static java.util.stream.Collectors.toList;
  * @since CloudSim Toolkit 1.0
  */
 public class VmSimple extends CustomerEntityAbstract implements Vm {
+    private Double latency;
+
+    @Override
+    public void setLatecny(final double number){
+        latency = number;
+    }
+
+    @Override
+    public Double getLatecny() {
+        return latency;
+    }
+
     /** @see #setDefaultRamCapacity(long) */
     private static long defaultRamCapacity = 1024;
     /** @see #setDefaultBwCapacity(long) */
@@ -112,6 +126,7 @@ public class VmSimple extends CustomerEntityAbstract implements Vm {
     private double lastBusyTime;
     private VmGroup group;
     private double timeZone;
+    private Location location;
 
     /**
      * Creates a Vm with 1024 MEGA of RAM, 100 Megabits/s of Bandwidth and 1024 MEGA of Storage Size.
@@ -1027,9 +1042,23 @@ public class VmSimple extends CustomerEntityAbstract implements Vm {
         return timeZone;
     }
 
+
+
+
     @Override
     public Vm setTimeZone(final double timeZone) {
         this.timeZone = validateTimeZone(timeZone);
+        return this;
+    }
+
+    @Override
+    public Location getLocation() {
+        return location;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        this.location = location;
         return this;
     }
 }

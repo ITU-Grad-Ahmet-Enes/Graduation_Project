@@ -36,6 +36,14 @@ import java.util.List;
  * @since CloudSim Plus 1.0
  */
 public interface Datacenter extends SimEntity, PowerAware, TimeZoned, GeoLocation {
+
+    boolean working();
+    void workingUpdate(boolean status);
+    int getDatacenterCapacity();
+    void setDatacenterCapacity(int datacenterCapacity);
+    int getCurrentCapacity();
+    void increaseCurrentCapacity();
+
     Logger LOGGER = LoggerFactory.getLogger(Datacenter.class.getSimpleName());
 
     /**
