@@ -4,6 +4,8 @@ import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.SimEntity;
 import org.cloudbus.cloudsim.core.SimEntityNullBase;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
+import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudsimplus.listeners.DatacenterBrokerEventInfo;
 import org.cloudsimplus.listeners.EventInfo;
@@ -69,4 +71,14 @@ final class DatacenterBrokerNull implements DatacenterBroker, SimEntityNullBase 
     @Override public DatacenterBroker submitVm(Vm vm) { return this; }
     @Override public DatacenterBroker submitVmList(List<? extends Vm> list) { return this; }
     @Override public DatacenterBroker submitVmList(List<? extends Vm> list, double submissionDelay) { return this; }
+
+    @Override
+    public Location getLocation() {
+        return null;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        return null;
+    }
 }

@@ -110,6 +110,7 @@ public class SelectNextDatacenterExample {
             list.add(createDatacenter(i));
         }
 
+
         return list;
     }
 

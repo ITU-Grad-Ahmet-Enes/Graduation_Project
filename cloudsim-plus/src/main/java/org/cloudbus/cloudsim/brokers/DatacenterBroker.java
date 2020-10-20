@@ -9,6 +9,7 @@ package org.cloudbus.cloudsim.brokers;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.SimEntity;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.GeoLocation;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudbus.cloudsim.vms.VmGroup;
 import org.cloudsimplus.listeners.DatacenterBrokerEventInfo;
@@ -35,7 +36,7 @@ import java.util.function.Function;
  * @author Manoel Campos da Silva Filho
  * @since CloudSim Plus 1.0
  */
-public interface DatacenterBroker extends SimEntity {
+public interface DatacenterBroker extends SimEntity, GeoLocation {
     Logger LOGGER = LoggerFactory.getLogger(DatacenterBroker.class.getSimpleName());
 
     /**

@@ -47,7 +47,7 @@ import static java.util.stream.Collectors.toList;
 public class DatacenterSimple extends CloudSimEntity implements Datacenter {
 
     private boolean OnOff = true;
-    private int datacenterCapacity = 1;
+    private int datacenterCapacity = 50;
     private int currentUsage = 0;
 
     @Override

@@ -112,7 +112,7 @@ public class DynamicCloudletsArrival1 {
 
         Vm vm = createAndSubmitVmAndCloudlets();
 
-        /*Defines a delay of 5 seconds and creates another group of cloudlets
+        /*Defines a delay of of clo 5 seconds and creates another groupudlets
         that will start executing inside a VM only after this delay expires.*/
         double submissionDelay = 5;
         createAndSubmitCloudlets(vm, submissionDelay);

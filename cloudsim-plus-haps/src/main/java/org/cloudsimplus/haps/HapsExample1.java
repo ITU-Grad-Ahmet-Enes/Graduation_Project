@@ -30,11 +30,6 @@ public class HapsExample1 {
      * Datacenters Location
      */
 
-    private static final double[][] DATACENTERS_LOCATIONS = {{41.5,30.0,10},{19.3,12.0,0},{39.3,38.0,0},{36.0,31.0,0},{40.0,25.0,0}};
-
-    private static final double[][] VMS_LOCATIONS = {{40.0,41.0,0},{41.0,29.0,0.0},{40.0,27.0,0},{37.0,27.0,0},{36.0,32.0,0},{38.0,36.0,0},{38.0,40.0,0},
-            {40.0,22.0,0},{27.0,33.0,0},{30.0,41.0,0}};
-
     private static final int HOSTS = 5;
     private static final int HOST_PES = 8;
 

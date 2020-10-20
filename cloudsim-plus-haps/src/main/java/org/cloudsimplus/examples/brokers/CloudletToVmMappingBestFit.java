@@ -68,13 +68,13 @@ import java.util.List;
  * @since CloudSim Plus 1.3.0
  */
 public class CloudletToVmMappingBestFit {
-    private static final int HOSTS = 2;
-    private static final int HOST_PES = 8;
+    private static final int HOSTS = 1;
+    private static final int HOST_PES = 1;
 
-    private static final int VMS = 4;
+    private static final int VMS = 1;
 
-    private static final int CLOUDLETS = 4;
-    private static final int CLOUDLET_LENGTH = 10000;
+    private static final int CLOUDLETS = 1000;
+    private static final int CLOUDLET_LENGTH = 10;
 
     private final CloudSim simulation;
     private DatacenterBroker broker0;

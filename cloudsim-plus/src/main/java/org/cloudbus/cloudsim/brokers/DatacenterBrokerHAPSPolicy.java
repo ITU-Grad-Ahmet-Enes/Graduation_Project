@@ -4,12 +4,14 @@ import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
 import org.cloudbus.cloudsim.datacenters.GeoLocation;
+import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.vms.Vm;
 
 import java.util.ArrayList;
 import java.util.Set;
 
 public class DatacenterBrokerHAPSPolicy extends DatacenterBrokerAbstract {
+    private Location location;
     /**
      * Index of the last VM selected from the {@link #getVmExecList()}
      * to run some Cloudlet.
@@ -78,5 +80,16 @@ public class DatacenterBrokerHAPSPolicy extends DatacenterBrokerAbstract {
         cyclically selects the next VM on the list of created VMs.*/
         lastSelectedVmIndex = ++lastSelectedVmIndex % getVmExecList().size();
         return getVmFromCreatedList(lastSelectedVmIndex);
+    }
+
+    @Override
+    public Location getLocation() {
+        return location;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        this.location = location;
+        return this;
     }
 }

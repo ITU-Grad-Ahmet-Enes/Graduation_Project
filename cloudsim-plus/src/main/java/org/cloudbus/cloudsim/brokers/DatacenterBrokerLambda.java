@@ -1,10 +1,3 @@
-/*
- * Title:        CloudSim Toolkit
- * Description:  CloudSim (Cloud Simulation) Toolkit for Modeling and Simulation of Clouds
- * Licence:      GPL - http://www.gnu.org/copyleft/gpl.html
- *
- * Copyright (c) 2009-2012, The University of Melbourne, Australia
- */
 package org.cloudbus.cloudsim.brokers;
 
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
@@ -14,32 +7,28 @@ import org.cloudbus.cloudsim.datacenters.GeoLocation;
 import org.cloudbus.cloudsim.datacenters.Location;
 import org.cloudbus.cloudsim.vms.Vm;
 
-/**
- * A simple implementation of {@link DatacenterBroker} that try to host customer's VMs
- * at the first Datacenter found. If there isn't capacity in that one,
- * it will try the other ones.
- *
- * <p>The default selection of VMs for each cloudlet is based on a Round-Robin policy,
- * cyclically selecting the next VM from the broker VM list for each requesting
- * cloudlet.
- * However, when {@link #setSelectClosestDatacenter(boolean) selection of the closest datacenter}
- * is enabled, the broker will try to place each VM at the closest Datacenter as possible,
- * according to their timezone.</p>
- *
- * <p>Such a policy doesn't check if the selected VM is really suitable for the Cloudlet
- * and may not provide an optimal mapping.</p>
- *
- * @author Rodrigo N. Calheiros
- * @author Anton Beloglazov
- * @author Manoel Campos da Silva Filho
- * @since CloudSim Toolkit 1.0
- *
- * @see DatacenterBrokerFirstFit
- * @see DatacenterBrokerBestFit
- * @see DatacenterBrokerHeuristic
- */
-public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
+public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
     private Location location;
+    private double lambdaValue;
+
+    public double getLambdaValue() {
+        return lambdaValue;
+    }
+
+    public void setLambdaValue(double lambdaValue) {
+        this.lambdaValue = lambdaValue;
+    }
+
+    @Override
+    public Location getLocation() {
+        return location;
+    }
+
+    @Override
+    public GeoLocation setLocation(Location location) {
+        this.location = location;
+        return this;
+    }
     /**
      * Index of the last VM selected from the {@link #getVmExecList()}
      * to run some Cloudlet.
@@ -56,7 +45,7 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      *
      * @param simulation the CloudSim instance that represents the simulation the Entity is related to
      */
-    public DatacenterBrokerSimple(final CloudSim simulation) {
+    public DatacenterBrokerLambda(final CloudSim simulation) {
         this(simulation, "");
     }
 
@@ -66,7 +55,7 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      * @param simulation the CloudSim instance that represents the simulation the Entity is related to
      * @param name the DatacenterBroker name
      */
-    public DatacenterBrokerSimple(final CloudSim simulation, final String name) {
+    public DatacenterBrokerLambda(final CloudSim simulation, final String name) {
         super(simulation, name);
         this.lastSelectedVmIndex = -1;
         this.lastSelectedDcIndex = -1;
@@ -91,17 +80,16 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      */
     @Override
     protected Datacenter defaultDatacenterMapper(final Datacenter lastDatacenter, final Vm vm) {
-        System.out.println("buradamıyız5");
         if(getDatacenterList().isEmpty()) {
             throw new IllegalStateException("You don't have any Datacenter created.");
         }
 
         if (lastDatacenter != Datacenter.NULL) {
-            return getDatacenterList().get(lastSelectedDcIndex);
+            return getDatacenterList().get(++lastSelectedDcIndex);
         }
 
         /*If all Datacenter were tried already, return Datacenter.NULL to indicate
-        * there isn't a suitable Datacenter to place waiting VMs.*/
+         * there isn't a suitable Datacenter to place waiting VMs.*/
         if(lastSelectedDcIndex == getDatacenterList().size()-1){
             return Datacenter.NULL;
         }
@@ -120,7 +108,8 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      */
     @Override
     protected Vm defaultVmMapper(final Cloudlet cloudlet) {
-        System.out.println("buradamıyız");
+        double pretectedValue = Math.random();
+
         if (cloudlet.isBoundToVm()) {
             return cloudlet.getVm();
         }
@@ -129,20 +118,49 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
             return Vm.NULL;
         }
 
+        if(pretectedValue <= lambdaValue) {
+            lastSelectedVmIndex = ++lastSelectedVmIndex % (getVmExecList().size()-1);
+        } else {
+            lastSelectedVmIndex = getVmExecList().size() - 1;
+        }
+/*
+        for(Cloudlet cloudlet1 : getCloudletCreatedList()) {
+            System.out.println(cloudlet1.getVm().getId());
+            System.out.println(cloudlet1.isFinished());
+        }
+
+ */
+/*
+        for(Vm vm : getVmCreatedList()) {
+        }
+
+ */
+        /*
+        for(Vm vm : getVmCreatedList()) {
+            System.out.println(vm.getFreePesNumber());
+        }
+         */
+
+         /*
+        for(Datacenter datacenter : getDatacenterList()) {
+        }
+        */
+
+        /*
+        for(Datacenter datacenter : getDatacenterList()) {
+            System.out.println(cloudlet.getBroker().getLocation().getX() + " " + cloudlet.getBroker().getLocation().getY() + " " + cloudlet.getBroker().getLocation().getZ());
+            System.out.println(datacenter.getLocation().getX() + " " + datacenter.getLocation().getY() + " " + datacenter.getLocation().getZ());
+        }
+
+        for(Datacenter datacenter : datacenterList) {
+            System.out.println(cloudlet.getBroker().getLocation().getX() + " " + cloudlet.getBroker().getLocation().getY() + " " + cloudlet.getBroker().getLocation().getZ());
+            System.out.println(datacenter.getLocation().getX() + " " + datacenter.getLocation().getY() + " " + datacenter.getLocation().getZ());
+        }
+
+         */
         /*If the cloudlet isn't bound to a specific VM or the bound VM was not created,
         cyclically selects the next VM on the list of created VMs.*/
-        lastSelectedVmIndex = ++lastSelectedVmIndex % getVmExecList().size();
+
         return getVmFromCreatedList(lastSelectedVmIndex);
-    }
-
-    @Override
-    public Location getLocation() {
-        return location;
-    }
-
-    @Override
-    public GeoLocation setLocation(Location location) {
-        this.location = location;
-        return this;
     }
 }
