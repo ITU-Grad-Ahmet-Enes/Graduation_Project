@@ -3,7 +3,6 @@ package org.cloudsimplus.haps;
 import org.cloudbus.cloudsim.allocationpolicies.VmAllocationPolicySimple;
 import org.cloudbus.cloudsim.brokers.DatacenterBroker;
 import org.cloudbus.cloudsim.brokers.DatacenterBrokerLambda;
-import org.cloudbus.cloudsim.brokers.DatacenterBrokerSimple;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 import org.cloudbus.cloudsim.core.CloudSim;
@@ -24,12 +23,11 @@ import org.cloudbus.cloudsim.utilizationmodels.UtilizationModelFull;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudbus.cloudsim.vms.VmSimple;
 import org.cloudsimplus.builders.tables.CloudletsTableBuilder;
-import org.cloudsimplus.examples.ParallelSimulationsExample;
-import org.cloudsimplus.examples.listeners.CloudletListenersExample1;
-import org.cloudsimplus.listeners.CloudletVmEventInfo;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
+import java.awt.Color;
 
 public class Lambda {
     /**
@@ -58,19 +56,18 @@ public class Lambda {
     private List<Cloudlet> finishedCloudletList;
     private static Map<Double, Integer> finishedSimulationTimes;
 
-
-
     /**
      * Starts the example execution, calling the class constructor\
      * to build and run the simulation.
      *
      * @param args command line parameters
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         DecimalFormat newFormat = new DecimalFormat("#.#");
         List<Lambda> simulationList = new ArrayList<>(10);
         for(double i=0.0; i<1.0; i+=0.1) {
-            double twoDecimal =  Double.parseDouble(newFormat.format(i));
+            //double twoDecimal =  Double.parseDouble(newFormat.format(i));
+            double twoDecimal =  Double.parseDouble(newFormat.format(i).replaceAll(",", "."));
             simulationList.add(
                     new Lambda(twoDecimal)
             );
@@ -79,12 +76,27 @@ public class Lambda {
         simulationList.parallelStream().forEach(Lambda::run);
         System.out.println();
         simulationList.forEach(Lambda::printResults);
-
+        
+        List<Double> x = new ArrayList<Double>();
+        List<Double> y = new ArrayList<Double>();
         Map<Double, Integer> treeMap = new TreeMap<>(finishedSimulationTimes);
         for(Map.Entry entry : treeMap.entrySet()) {
             System.out.println("Lambda with " + entry.getKey() + " Finish time: " + entry.getValue());
+            x.add((Double) entry.getKey());
+            y.add(Double.valueOf((Integer)entry.getValue()));
         }
+        Plot plot = Plot.plot(Plot.plotOpts().
+                title("Lambda").
+                legend(Plot.LegendFormat.BOTTOM)).
+                xAxis("Lambda", Plot.axisOpts().
+                        range(0, 1)).
+                yAxis("Time", Plot.axisOpts().
+                        range(0, 3000)).
+                series("Data", Plot.data().
+                                xy(x,y),
+                        Plot.seriesOpts().marker(Plot.Marker.CIRCLE));
 
+        plot.save("lambda", "png");
     }
 
     /**
