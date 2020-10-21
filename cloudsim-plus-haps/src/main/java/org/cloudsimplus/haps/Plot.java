@@ -57,7 +57,7 @@ public class Plot {
 	public static class PlotOptions {
 		
 		private String title = "";
-		private int width = 800;
+		private int width = 1000;
 		private int height = 600;
 		private Color backgroundColor = Color.WHITE;
 		private Color foregroundColor = Color.BLACK;

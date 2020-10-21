@@ -91,7 +91,7 @@ public class Lambda {
                 xAxis("Lambda", Plot.axisOpts().
                         range(0, 1)).
                 yAxis("Time", Plot.axisOpts().
-                        range(0, 3000)).
+                        range(0, 3000).format(Plot.AxisFormat.NUMBER_INT)).
                 series("Data", Plot.data().
                                 xy(x,y),
                         Plot.seriesOpts().marker(Plot.Marker.CIRCLE));
