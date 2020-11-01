@@ -86,7 +86,7 @@ public class CloudInformationService extends CloudSimEntity {
     @Override
     public void shutdownEntity() {
         super.shutdownEntity();
-        LOGGER.info("{}: Notify all CloudSim Plus entities to shutdown.{}", super.getName(), System.lineSeparator());
+        //LOGGER.info("{}: Notify all CloudSim Plus entities to shutdown.{}", super.getName(), System.lineSeparator());
 
         signalShutdown(datacenterList);
         signalShutdown(cisList);

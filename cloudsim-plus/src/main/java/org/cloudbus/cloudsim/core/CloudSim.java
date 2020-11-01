@@ -231,7 +231,7 @@ public class CloudSim implements Simulation {
         }
 
         notifyEndOfSimulationToEntities();
-        LOGGER.info("Simulation: No more future events{}", System.lineSeparator());
+        //LOGGER.info("Simulation: No more future events{}", System.lineSeparator());
 
         final List<SimEntity> entitiesAlive = entities.stream().filter(CloudSimEntity::isAlive).collect(toList());
 
@@ -245,9 +245,9 @@ public class CloudSim implements Simulation {
 
         printSimulationFinished();
 
-        LOGGER.debug(
+        /*LOGGER.debug(
             "DeferredQueue >> max size: {} added to middle: {} added to tail: {}",
-            deferred.getMaxSize(), deferred.getAddedToMiddle(), deferred.getAddedToTail());
+            deferred.getMaxSize(), deferred.getAddedToMiddle(), deferred.getAddedToTail());*/
     }
 
     @Override
@@ -291,7 +291,7 @@ public class CloudSim implements Simulation {
                     "If you've paused the simulation and want to resume it, call the resume() method.");
         }
 
-        LOGGER.info("{}================== Starting {} =================={}", System.lineSeparator(), VERSION,  System.lineSeparator());
+        //LOGGER.info("{}================== Starting {} =================={}", System.lineSeparator(), VERSION,  System.lineSeparator());
         startEntitiesIfNotRunning();
         this.alreadyRunOnce = true;
     }
@@ -362,7 +362,7 @@ public class CloudSim implements Simulation {
         entities.stream()
             .filter(CloudSimEntity::isAlive)
             .forEach(e -> sendNow(e, CloudSimTags.END_OF_SIMULATION));
-        LOGGER.info("{}: Processing last events before simulation shutdown.", clockStr());
+        //LOGGER.info("{}: Processing last events before simulation shutdown.", clockStr());
 
         while (true) {
             if(!runClockTickAndProcessFutureEvents(Double.MAX_VALUE)){
@@ -385,7 +385,7 @@ public class CloudSim implements Simulation {
                 "maybe it's because you set a too long termination time and new events aren't arriving so far.",
                 terminationTime, lastCloudletProcessingUpdate);
         }
-        LOGGER.info("{}================== {}{} =================={}", System.lineSeparator(), msg1, msg2, System.lineSeparator());
+        //LOGGER.info("{}================== {}{} =================={}", System.lineSeparator(), msg1, msg2, System.lineSeparator());
 
     }
 
@@ -831,7 +831,7 @@ public class CloudSim implements Simulation {
 
         running = true;
         entities.forEach(SimEntity::start);
-        LOGGER.info("Entities started.");
+        //LOGGER.info("Entities started.");
     }
 
     @Override

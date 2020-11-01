@@ -602,7 +602,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
      */
     private void processDatacenterListRequest(final SimEvent evt) {
         setDatacenterList((Set<Datacenter>) evt.getData());
-        LOGGER.info("{}: {}: List of {} datacenters(s) received.", getSimulation().clockStr(), getName(), datacenterList.size());
+        //LOGGER.info("{}: {}: List of {} datacenters(s) received.", getSimulation().clockStr(), getName(), datacenterList.size());
         requestDatacenterToCreateWaitingVms(false);
     }
 
@@ -755,7 +755,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
         final Cloudlet cloudlet = (Cloudlet) evt.getData();
         cloudletsFinishedList.add(cloudlet);
         ((VmSimple) cloudlet.getVm()).addExpectedFreePesNumber(cloudlet.getNumberOfPes());
-        LOGGER.info("{}: {}: {} finished in {} and returned to broker.", getSimulation().clockStr(), getName(), cloudlet, cloudlet.getVm());
+        //LOGGER.info("{}: {}: {} finished in {} and returned to broker.", getSimulation().clockStr(), getName(), cloudlet, cloudlet.getVm());
 
         if (cloudlet.getVm().getCloudletScheduler().isEmpty()) {
             requestIdleVmDestruction(cloudlet.getVm());
@@ -797,7 +797,7 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
 
         if (vm.isCreated()) {
             if((delay > DEF_VM_DESTRUCTION_DELAY && vm.isIdleEnough(delay)) || isFinished()) {
-                LOGGER.info("{}: {}: Requesting {} destruction.", getSimulation().clockStr(), getName(), vm);
+               // LOGGER.info("{}: {}: Requesting {} destruction.", getSimulation().clockStr(), getName(), vm);
                 sendNow(getDatacenter(vm), CloudSimTags.VM_DESTROY, vm);
             }
 
@@ -901,9 +901,10 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
     private void logVmCreationRequest(final Datacenter datacenter, final boolean isFallbackDatacenter, final Vm vm) {
         final String fallbackMsg = isFallbackDatacenter ? " (due to lack of a suitable Host in previous one)" : "";
         if(vm.getSubmissionDelay() == 0)
-            LOGGER.info(
+        {}
+            /*LOGGER.info(
                 "{}: {}: Trying to create {} in {}{}",
-                getSimulation().clockStr(), getName(), vm, datacenter.getName(), fallbackMsg);
+                getSimulation().clockStr(), getName(), vm, datacenter.getName(), fallbackMsg);*/
         else
             LOGGER.info(
                 "{}: {}: Creation of {} in {}{} will be requested in {} seconds",
@@ -975,10 +976,10 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
                 String.format(" with a requested delay of %.0f seconds", cloudlet.getSubmissionDelay()) :
                 "";
 
-        LOGGER.info(
+        /*LOGGER.info(
             "{}: {}: Sending Cloudlet {} to {} in {}{}.",
             getSimulation().clockStr(), getName(), cloudlet.getId(),
-            lastSelectedVm, lastSelectedVm.getHost(), delayMsg);
+            lastSelectedVm, lastSelectedVm.getHost(), delayMsg);*/
     }
 
     private boolean allWaitingCloudletsSubmittedToVm() {
@@ -988,9 +989,9 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
 
         //avoid duplicated notifications
         if (wereThereWaitingCloudlets) {
-            LOGGER.info(
+            /*LOGGER.info(
                 "{}: {}: All waiting Cloudlets submitted to some VM.",
-                getSimulation().clockStr(), getName());
+                getSimulation().clockStr(), getName());*/
             wereThereWaitingCloudlets = false;
         }
 
@@ -1000,13 +1001,13 @@ public abstract class DatacenterBrokerAbstract extends CloudSimEntity implements
     @Override
     public void shutdownEntity() {
         super.shutdownEntity();
-        LOGGER.info("{}: {} is shutting down...", getSimulation().clockStr(), getName());
+        //LOGGER.info("{}: {} is shutting down...", getSimulation().clockStr(), getName());
         requestVmDestructionAfterAllCloudletsFinished();
     }
 
     @Override
     public void startEntity() {
-        LOGGER.info("{} is starting...", getName());
+        //LOGGER.info("{} is starting...", getName());
         schedule(getSimulation().getCloudInfoService(), 0, CloudSimTags.DATACENTER_LIST_REQUEST);
     }
 

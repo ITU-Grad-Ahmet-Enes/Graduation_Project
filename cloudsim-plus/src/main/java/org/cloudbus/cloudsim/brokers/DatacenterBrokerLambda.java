@@ -85,6 +85,9 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
         }
 
         if (lastDatacenter != Datacenter.NULL) {
+            if(lastSelectedDcIndex > 19) {
+                return getDatacenterList().get(lastSelectedDcIndex);
+            }
             return getDatacenterList().get(++lastSelectedDcIndex);
         }
 
@@ -121,7 +124,12 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
         if(pretectedValue <= lambdaValue) {
             lastSelectedVmIndex = ++lastSelectedVmIndex % (getVmExecList().size()-1);
         } else {
-            lastSelectedVmIndex = getVmExecList().size() - 1;
+            if(cloudlet.getId()%2==0) {
+                lastSelectedVmIndex = getVmExecList().size() - 2;
+            } else {
+                lastSelectedVmIndex = getVmExecList().size() - 1;
+            }
+
         }
 /*
         for(Cloudlet cloudlet1 : getCloudletCreatedList()) {

@@ -309,9 +309,9 @@ public abstract class VmAllocationPolicyAbstract implements VmAllocationPolicy {
 
     private boolean createVm(final Vm vm, final Host host) {
         if (host.createVm(vm)) {
-            LOGGER.info(
+            /*LOGGER.info(
                 "{}: {}: {} has been allocated to {}",
-                vm.getSimulation().clockStr(), getClass().getSimpleName(), vm, host);
+                vm.getSimulation().clockStr(), getClass().getSimpleName(), vm, host);*/
             return true;
         }
 

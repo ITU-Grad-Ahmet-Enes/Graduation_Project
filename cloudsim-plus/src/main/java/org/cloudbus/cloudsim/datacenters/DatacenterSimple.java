@@ -633,13 +633,13 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
             sendNow(vm.getBroker(), CloudSimTags.VM_DESTROY_ACK, vm);
         }
 
-        final String warningMsg = generateNotFinishedCloudletsWarning(vm);
+        /*final String warningMsg = generateNotFinishedCloudletsWarning(vm);
         final String msg = String.format(
                 "%s: %s: %s destroyed on %s. %s",
                 getSimulation().clockStr(), getClass().getSimpleName(), vm, vm.getHost(), warningMsg);
         if(warningMsg.isEmpty())
             LOGGER.info(msg);
-        else LOGGER.warn(msg);
+        else LOGGER.warn(msg);*/
     }
 
     private String generateNotFinishedCloudletsWarning(final Vm vm) {
@@ -906,12 +906,12 @@ public class DatacenterSimple extends CloudSimEntity implements Datacenter {
     @Override
     public void shutdownEntity() {
         super.shutdownEntity();
-        LOGGER.info("{}: {} is shutting down...", getSimulation().clockStr(), getName());
+        //LOGGER.info("{}: {} is shutting down...", getSimulation().clockStr(), getName());
     }
 
     @Override
     protected void startEntity() {
-        LOGGER.info("{} is starting...", getName());
+        //LOGGER.info("{} is starting...", getName());
         sendNow(getSimulation().getCloudInfoService(), CloudSimTags.DATACENTER_REGISTRATION_REQUEST, this);
     }
 

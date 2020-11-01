@@ -1,8 +1,12 @@
 package org.cloudsimplus.haps;
 
+import org.apache.commons.collections4.list.TreeList;
+import org.apache.commons.math3.random.JDKRandomGenerator;
+import org.apache.commons.math3.random.RandomGenerator;
 import org.cloudbus.cloudsim.allocationpolicies.VmAllocationPolicySimple;
 import org.cloudbus.cloudsim.brokers.DatacenterBroker;
 import org.cloudbus.cloudsim.brokers.DatacenterBrokerLambda;
+import org.cloudbus.cloudsim.brokers.DatacenterBrokerSimple;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 import org.cloudbus.cloudsim.core.CloudSim;
@@ -23,6 +27,8 @@ import org.cloudbus.cloudsim.utilizationmodels.UtilizationModelFull;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudbus.cloudsim.vms.VmSimple;
 import org.cloudsimplus.builders.tables.CloudletsTableBuilder;
+import org.apache.commons.math3.distribution.WeibullDistribution;
+
 
 import java.io.IOException;
 import java.text.DecimalFormat;
@@ -40,6 +46,8 @@ public class Lambda {
      */
     private static final int VM_PES_NUMBER = 1;
 
+    private static final int BROKERS = 4;
+
     /**
      * Number of Cloudlets to create.
      */
@@ -51,10 +59,13 @@ public class Lambda {
     private final List<Vm> vmList;
     private final List<Cloudlet> cloudletList;
     private final List<Datacenter> datacenterList;
+    private List<DatacenterBroker> brokers;
     private final DatacenterBroker broker;
     private final CloudSim simulation;
     private List<Cloudlet> finishedCloudletList;
     private static Map<Double, Integer> finishedSimulationTimes;
+    private static WeibullDistribution weibullDistribution;
+    private List<Integer> weibullDistList;
 
     /**
      * Starts the example execution, calling the class constructor\
@@ -63,6 +74,8 @@ public class Lambda {
      * @param args command line parameters
      */
     public static void main(String[] args) throws IOException {
+        RandomGenerator rg = new JDKRandomGenerator();
+        weibullDistribution = new WeibullDistribution(rg,1.0,25, WeibullDistribution.DEFAULT_INVERSE_ABSOLUTE_ACCURACY);
         DecimalFormat newFormat = new DecimalFormat("#.#");
         List<Lambda> simulationList = new ArrayList<>(10);
         for(double i=0.0; i<1.0; i+=0.1) {
@@ -107,7 +120,7 @@ public class Lambda {
           Make sure to import org.cloudsimplus.util.Log;*/
         //Log.setLevel(ch.qos.logback.classic.Level.WARN);
 
-        System.out.println("Starting " + getClass().getSimpleName());
+        //System.out.println("Starting " + getClass().getSimpleName());
         simulation = new CloudSim();
 
         this.hostList = new ArrayList<>();
@@ -115,6 +128,10 @@ public class Lambda {
         this.cloudletList = new ArrayList<>();
         this.datacenterList = new ArrayList<>();
         this.finishedSimulationTimes = new HashMap<>();
+        this.weibullDistList = new ArrayList<>();
+
+        brokers = createBrokers();
+        createWeibullDist();
         createDatacenter();
 
         this.broker = new DatacenterBrokerLambda(simulation);
@@ -122,6 +139,13 @@ public class Lambda {
         ((DatacenterBrokerLambda) this.broker).setLambdaValue(lambda);
         createAndSubmitVms();
         createAndSubmitCloudlets();
+    }
+
+    public void createWeibullDist() {
+        for(int i=0; i<NUMBER_OF_CLOUDLETS; i++) {
+            weibullDistList.add((int)weibullDistribution.sample());
+        }
+        weibullDistList.sort(Comparator.comparingDouble(Integer::intValue));
     }
 
     public void run() {
@@ -148,7 +172,7 @@ public class Lambda {
      * A Listener function that will be called every time a cloudlet
      * finishes running into a VM. All cloudlets will use this same listener.
      *
-     * @param eventInfo information about the happened event
+     * param eventInfo information about the happened event
      */
     /*
     private void onCloudletFinishListener(CloudletVmEventInfo eventInfo) {
@@ -166,25 +190,8 @@ public class Lambda {
                 .setTitle(title)
                 .build();
 
-
-        finishedSimulationTimes.put(((DatacenterBrokerLambda) this.broker).getLambdaValue(), new Double(finishedCloudletList.get(finishedCloudletList.size()-1).getFinishTime()).intValue());
-    }
-
-    /**
-     * Creates cloudlets and submit them to the broker.
-     *
-     * @see #createCloudlet(long, long)
-     */
-    private void createAndSubmitCloudlets() {
-        long cloudletId;
-        long length = 10000;
-        for(int i = 0; i < NUMBER_OF_CLOUDLETS; i++){
-            cloudletId = i;
-            Cloudlet cloudlet = createCloudlet(cloudletId,length);
-            this.cloudletList.add(cloudlet);
-        }
-
-        this.broker.submitCloudletList(cloudletList);
+        finishedCloudletList.sort(Comparator.comparingDouble(Cloudlet::getActualCpuTime));
+        finishedSimulationTimes.put(((DatacenterBrokerLambda) this.broker).getLambdaValue(), (int)finishedCloudletList.get(finishedCloudletList.size()-1).getActualCpuTime());
     }
 
     /**
@@ -195,10 +202,14 @@ public class Lambda {
         for(int i=0; i<NUMBER_OF_BASE+NUMBER_OF_HAPS;i++) {
             if(i < NUMBER_OF_BASE) {
                 vm = createVm(i, false);
+                this.vmList.add(vm);
             } else {
                 vm = createVm(i, true);
+                this.vmList.add(vm);
+                vm = createVm(++i, true);
+                this.vmList.add(vm);
             }
-            this.vmList.add(vm);
+
         }
         this.broker.submitVmList(vmList);
     }
@@ -220,16 +231,33 @@ public class Lambda {
             ram = 512; // vm memory (Megabyte)
             bw = 1000;
         } else {
-            mips = 1000*5;
-            size = 10000*5; // image size (Megabyte)
-            ram = 512*5; // vm memory (Megabyte)
-            bw = 1000*5;
+            mips = 1000*3;
+            size = 10000*3; // image size (Megabyte)
+            ram = 512*3; // vm memory (Megabyte)
+            bw = 1000*3;
         }
 
         Vm vm = new VmSimple(id, mips, VM_PES_NUMBER)
                 .setRam(ram).setBw(bw).setSize(size)
                 .setCloudletScheduler(new CloudletSchedulerSpaceShared());
         return vm;
+    }
+
+    /**
+     * Creates cloudlets and submit them to the broker.
+     *
+     * @see #createCloudlet(long, long)
+     */
+    private void createAndSubmitCloudlets() {
+        long cloudletId;
+        long length = 10000;
+        for(int i = 0; i < NUMBER_OF_CLOUDLETS; i++){
+            cloudletId = i;
+            Cloudlet cloudlet = createCloudlet(cloudletId,length);
+            cloudletList.add(cloudlet);
+        }
+        //cloudletList.sort(Comparator.comparingDouble(Cloudlet::getId));
+        broker.submitCloudletList(cloudletList);
     }
 
     /**
@@ -256,7 +284,21 @@ public class Lambda {
                 .addOnFinishListener(this::onCloudletFinishListener);
 
          */
+
+        cloudlet.setSubmissionDelay(weibullDistList.get((int)id));
+        cloudlet.setExecStartTime(weibullDistList.get((int)id));
         return cloudlet;
+    }
+
+    private List<DatacenterBroker> createBrokers() {
+        final List<DatacenterBroker> list = new ArrayList<>(BROKERS);
+
+        for(int i=0; i<BROKERS; i++) {
+            final DatacenterBroker broker = new DatacenterBrokerSimple(simulation);
+            list.add(broker);
+        }
+        return list;
+
     }
 
     /**
@@ -277,17 +319,22 @@ public class Lambda {
 
         Host host;
         for(int i=0; i<NUMBER_OF_BASE+NUMBER_OF_HAPS; i++) {
+            Datacenter datacenter = new DatacenterSimple(simulation, new VmAllocationPolicySimple());
             double a = (Math.random() * (maxX-minX)) + minX;
             double b = (Math.random() * (maxY-minY)) + minY;
             double c = (Math.random() * (maxZ-minZ)) + minZ;
             if(i < NUMBER_OF_BASE) {
                 host = createHost(i, false);
+                datacenter.addHost(host);
+                datacenter.setLocation(new Location(a,b,c));
             } else {
                 host = createHost(i, true);
+                datacenter.addHost(host);
+                datacenter.setLocation(new Location(a,b,c));
+                host = createHost(i, true);
+                datacenter.addHost(host);
+                datacenter.setLocation(new Location(a,b,c));
             }
-            Datacenter datacenter = new DatacenterSimple(simulation, new VmAllocationPolicySimple());
-            datacenter.addHost(host);
-            datacenter.setLocation(new Location(a,b,c));
             datacenterList.add(datacenter);
         }
     }
@@ -310,10 +357,10 @@ public class Lambda {
             storage = 1000000; // host storage (Megabyte)
             bw = 10000; //Megabits/s
         } else {
-            mips = 1000*5;
-            ram = 2048*5; // host memory (Megabyte)
-            storage = 1000000*5; // host storage (Megabyte)
-            bw = 10000*5; //Megabits/s
+            mips = 1000*3;
+            ram = 2048*3; // host memory (Megabyte)
+            storage = 1000000*3; // host storage (Megabyte)
+            bw = 10000*3; //Megabits/s
         }
         for(int i = 0; i < HOST_PES_NUMBER; i++){
             peList.add(new PeSimple(mips, new PeProvisionerSimple()));
@@ -327,6 +374,7 @@ public class Lambda {
 
     }
     public List<Cloudlet> getFinishedCloudletList() {
+        //finishedCloudletList.sort(Comparator.comparingDouble(Cloudlet::getId));
         return finishedCloudletList;
     }
 }
