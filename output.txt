@@ -1,0 +1,333 @@
+Base station number is increasing, HAPS rate is always 25%
+
+HAPS power is increasing, Base stations is constant.
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 20, Number of Hosts: 20, Number of Vms: 20, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 352.77
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 306.55
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 262.55
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 223.55
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 190.55
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 207.77
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 249.33
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 299.77
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 330.33
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 401.77
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 448.77
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 160.11
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 138.99
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 114.77
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 96.99
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 84.99
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 105.33
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 123.55
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 146.11
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 173.77
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 188.11
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 211.55
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 60, Number of Hosts: 60, Number of Vms: 60, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 15, Number of Hosts: 15, Number of Vms: 15, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 92.11
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 84.33
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 69.99
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 62.77
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 55.09
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 65.53
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 79.77
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 93.99
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 106.33
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 124.77
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 143.11
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 80, Number of Hosts: 80, Number of Vms: 80, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 20, Number of Hosts: 20, Number of Vms: 20, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 62.33
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 58.98
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 48.55
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 39.1
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 44.65
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 51.98
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 71.33
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 72.55
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 74.77
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 105.11
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 108.33
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 100, Number of Hosts: 100, Number of Vms: 100, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 25, Number of Hosts: 25, Number of Vms: 25, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 45.11
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 44.99
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 35.55
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 30.1
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 32.54
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 46.87
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 51.98
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 61.09
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 66.31
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 70.55
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 82.77
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 5000, Ram for Host: 10240, Storage for Host: 5000000, BW for Host: 50000, Mips for Vm: 5000, Size for Vm: 50000, Ram for Vm: 2560, BW for Vm: 5000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 157.11
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 131.65
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 121.77
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 99.99
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 79.77
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 107.11
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 114.77
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 156.55
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 168.99
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 190.11
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 203.55
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 10000, Ram for Host: 20480, Storage for Host: 10000000, BW for Host: 100000, Mips for Vm: 10000, Size for Vm: 100000, Ram for Vm: 5120, BW for Vm: 10000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 74.98
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 60.66
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 44.22
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 52.11
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 76.55
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 94.11
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 128.77
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 149.11
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 165.77
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 184.33
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 206.55
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 15000, Ram for Host: 30720, Storage for Host: 15000000, BW for Host: 150000, Mips for Vm: 15000, Size for Vm: 150000, Ram for Vm: 7680, BW for Vm: 15000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 39.97
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 32.54
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 49.87
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 58.11
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 78.55
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 90.99
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 118.77
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 149.11
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 172.77
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 187.33
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 209.77
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 20000, Ram for Host: 40960, Storage for Host: 20000000, BW for Host: 200000, Mips for Vm: 20000, Size for Vm: 200000, Ram for Vm: 10240, BW for Vm: 20000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 29.09
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 28.32
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 37.76
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 63.33
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 83.77
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 106.11
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 109.55
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 139.33
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 168.77
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 196.33
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 214.55
+
+Base Stations Properties 
+------------------------------------------
+Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 1000, Ram for Host: 2048, Storage for Host: 1000000, BW for Host: 10000, Mips for Vm: 1000, Size for Vm: 10000, Ram for Vm: 512, BW for Vm: 1000
+
+HAPS Stations Properties 
+------------------------------------------
+Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 25000, Ram for Host: 51200, Storage for Host: 25000000, BW for Host: 250000, Mips for Vm: 25000, Size for Vm: 250000, Ram for Vm: 12800, BW for Vm: 25000
+
+Lambda Results 
+------------------------------------------
+For Lambda: 0.0
+Broker ID: 1, Finish Time: 19.51
+For Lambda: 0.1
+Broker ID: 1, Finish Time: 26.32
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 36.76
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 52.09
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 78.55
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 115.33
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 112.55
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 133.11
+For Lambda: 0.8
+Broker ID: 1, Finish Time: 169.33
+For Lambda: 0.9
+Broker ID: 1, Finish Time: 178.33
+For Lambda: 1.0
+Broker ID: 1, Finish Time: 199.55

@@ -59,14 +59,14 @@ import java.util.List;
  */
 public class MultipleBrokers3 {
     private static final int HOSTS = 2;
-    private static final int HOST_PES = 8;
+    private static final int HOST_PES = 3;
 
-    private static final int BROKERS = 2;
+    private static final int BROKERS = 3;
 
     private static final int VMS = 2;
-    private static final int VM_PES = 4;
+    private static final int VM_PES = 1;
 
-    private static final int CLOUDLETS = 2;
+    private static final int CLOUDLETS = 100;
     private static final int CLOUDLET_PES = 2;
     private static final int CLOUDLET_LENGTH = 10000;
 

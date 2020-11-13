@@ -30,15 +30,33 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
         return this;
     }
     /**
-     * Index of the last VM selected from the {@link #getVmExecList()}
+     * Index of the last Base VM selected from the {@link #getVmExecList()}
      * to run some Cloudlet.
      */
-    private int lastSelectedVmIndex;
+    private int lastSelectedBaseVmIndex;
 
     /**
-     * Index of the last Datacenter selected to place some VM.
+     * Index of the last Base Datacenter selected to place some VM.
      */
-    private int lastSelectedDcIndex;
+    private int lastSelectedBaseDcIndex;
+    /**
+     * Index of the last HAPS VM selected from the {@link #getVmExecList()}
+     * to run some Cloudlet.
+     */
+    private int lastSelectedHAPSVmIndex;
+
+    /**
+     * Index of the last HAPS Datacenter selected to place some VM.
+     */
+    private int lastSelectedHAPSDcIndex;
+
+    private int numberOfDcHAPS;
+
+    private int numberOfDcBase;
+
+    private int numberOfVmHAPS;
+
+    private int numberOfVmBase;
 
     /**
      * Creates a new DatacenterBroker.
@@ -57,8 +75,32 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
      */
     public DatacenterBrokerLambda(final CloudSim simulation, final String name) {
         super(simulation, name);
-        this.lastSelectedVmIndex = -1;
-        this.lastSelectedDcIndex = -1;
+        this.lastSelectedBaseDcIndex = -1;
+        this.lastSelectedBaseVmIndex = -1;
+        this.lastSelectedHAPSDcIndex = -1;
+        this.lastSelectedHAPSVmIndex = -1;
+    }
+
+    /**
+     * Creates a DatacenterBroker giving a specific name.
+     *
+     * @param simulation the CloudSim instance that represents the simulation the Entity is related to
+     * @param name the DatacenterBroker name
+     * @param numberOfDcHAPS number of datacenter HAPS
+     * @param numberOfDcBase number of datacenter Base Stations
+     * @param numberOfVmHAPS number of vm HAPS
+     * @param numberOfVmBase number of vm Base Stations
+     */
+    public DatacenterBrokerLambda(final CloudSim simulation, final String name, int numberOfDcHAPS, int numberOfDcBase, int numberOfVmHAPS, int numberOfVmBase) {
+        super(simulation, name);
+        this.lastSelectedBaseDcIndex = -1;
+        this.lastSelectedBaseVmIndex = -1;
+        this.lastSelectedHAPSDcIndex = -1;
+        this.lastSelectedHAPSVmIndex = -1;
+        this.numberOfDcBase = numberOfDcBase;
+        this.numberOfDcHAPS = numberOfDcHAPS;
+        this.numberOfVmBase = numberOfVmBase;
+        this.numberOfVmHAPS = numberOfVmHAPS;
     }
 
     /**
@@ -84,20 +126,17 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
             throw new IllegalStateException("You don't have any Datacenter created.");
         }
 
-        if (lastDatacenter != Datacenter.NULL) {
-            if(lastSelectedDcIndex > 19) {
-                return getDatacenterList().get(lastSelectedDcIndex);
-            }
-            return getDatacenterList().get(++lastSelectedDcIndex);
+        if (vm.getId() >= numberOfDcBase) {
+            return getDatacenterList().get(numberOfDcBase + (++lastSelectedHAPSDcIndex));
+        } else {
+            return getDatacenterList().get(++lastSelectedBaseDcIndex);
         }
 
         /*If all Datacenter were tried already, return Datacenter.NULL to indicate
-         * there isn't a suitable Datacenter to place waiting VMs.*/
+         * there isn't a suitable Datacenter to place waiting VMs.
         if(lastSelectedDcIndex == getDatacenterList().size()-1){
             return Datacenter.NULL;
-        }
-
-        return getDatacenterList().get(++lastSelectedDcIndex);
+        }*/
     }
 
     /**
@@ -121,15 +160,19 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
             return Vm.NULL;
         }
 
-        if(pretectedValue <= lambdaValue) {
-            lastSelectedVmIndex = ++lastSelectedVmIndex % (getVmExecList().size()-1);
-        } else {
-            if(cloudlet.getId()%2==0) {
-                lastSelectedVmIndex = getVmExecList().size() - 2;
-            } else {
-                lastSelectedVmIndex = getVmExecList().size() - 1;
-            }
+        if(lastSelectedHAPSVmIndex == numberOfVmHAPS-1) {
+            lastSelectedHAPSVmIndex = -1;
+        }
+        if(lastSelectedBaseVmIndex == numberOfVmBase-1) {
+            lastSelectedBaseVmIndex = -1;
+        }
 
+        if(pretectedValue <= lambdaValue) {
+            lastSelectedBaseVmIndex = ++lastSelectedBaseVmIndex % (numberOfVmBase);
+            return getVmFromCreatedList(lastSelectedBaseVmIndex);
+        } else {
+            int tempLastSelectedHAPSVmIndex =(numberOfVmBase + ++lastSelectedHAPSVmIndex) % (getVmExecList().size());
+            return getVmFromCreatedList(tempLastSelectedHAPSVmIndex);
         }
 /*
         for(Cloudlet cloudlet1 : getCloudletCreatedList()) {
@@ -169,6 +212,6 @@ public class DatacenterBrokerLambda extends DatacenterBrokerAbstract{
         /*If the cloudlet isn't bound to a specific VM or the bound VM was not created,
         cyclically selects the next VM on the list of created VMs.*/
 
-        return getVmFromCreatedList(lastSelectedVmIndex);
+
     }
 }

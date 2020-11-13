@@ -126,6 +126,27 @@ public class ParallelSimulationsExample implements Runnable {
         simulationList.forEach(ParallelSimulationsExample::printResults);
     }
 
+    /**
+     * Builds the simulation scenario and starts the simulation.
+     */
+    @Override
+    public void run() {
+        Datacenter datacenter0 = createDatacenter();
+
+        /*Creates a Broker accountable for submission of VMs and Cloudlets
+        on behalf of a given cloud user (customer).*/
+        broker = new DatacenterBrokerSimple(simulation);
+
+        createVms();
+        createCloudlets();
+
+        broker.submitCloudletList(cloudletList);
+        /*Starts the simulation and waits all cloudlets to be executed*/
+        simulation.start();
+
+        this.finishedCloudletList = broker.getCloudletFinishedList();
+    }
+
     private void printResults(){
         new CloudletsTableBuilder(getFinishedCloudletList())
             .setTitle(this.title)
@@ -227,26 +248,7 @@ public class ParallelSimulationsExample implements Runnable {
                 .setUtilizationModel(utilization);
     }
 
-    /**
-     * Builds the simulation scenario and starts the simulation.
-     */
-    @Override
-    public void run() {
-        Datacenter datacenter0 = createDatacenter();
 
-        /*Creates a Broker accountable for submission of VMs and Cloudlets
-        on behalf of a given cloud user (customer).*/
-        broker = new DatacenterBrokerSimple(simulation);
-
-        createVms();
-        createCloudlets();
-
-        broker.submitCloudletList(cloudletList);
-        /*Starts the simulation and waits all cloudlets to be executed*/
-        simulation.start();
-
-        this.finishedCloudletList = broker.getCloudletFinishedList();
-    }
 
     public int getCloudletsToCreate() {
         return cloudletsToCreate;

@@ -1,12 +1,10 @@
 package org.cloudsimplus.haps;
 
-import org.apache.commons.collections4.list.TreeList;
 import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.commons.math3.random.RandomGenerator;
 import org.cloudbus.cloudsim.allocationpolicies.VmAllocationPolicySimple;
 import org.cloudbus.cloudsim.brokers.DatacenterBroker;
 import org.cloudbus.cloudsim.brokers.DatacenterBrokerLambda;
-import org.cloudbus.cloudsim.brokers.DatacenterBrokerSimple;
 import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 import org.cloudbus.cloudsim.core.CloudSim;
@@ -33,7 +31,6 @@ import org.apache.commons.math3.distribution.WeibullDistribution;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
-import java.awt.Color;
 
 public class Lambda {
     /**
@@ -46,22 +43,18 @@ public class Lambda {
      */
     private static final int VM_PES_NUMBER = 1;
 
-    private static final int BROKERS = 4;
-
     /**
      * Number of Cloudlets to create.
      */
     private static final int NUMBER_OF_BASE = 20;
     private static final int NUMBER_OF_HAPS = 1;
-    private static final int NUMBER_OF_CLOUDLETS = 1000;
+    private static final int NUMBER_OF_CLOUDLETS = 25;
 
-    private final List<Host> hostList;
+    private final CloudSim simulation;
     private final List<Vm> vmList;
     private final List<Cloudlet> cloudletList;
     private final List<Datacenter> datacenterList;
-    private List<DatacenterBroker> brokers;
     private final DatacenterBroker broker;
-    private final CloudSim simulation;
     private List<Cloudlet> finishedCloudletList;
     private static Map<Double, Integer> finishedSimulationTimes;
     private static WeibullDistribution weibullDistribution;
@@ -89,7 +82,7 @@ public class Lambda {
         simulationList.parallelStream().forEach(Lambda::run);
         System.out.println();
         simulationList.forEach(Lambda::printResults);
-        
+
         List<Double> x = new ArrayList<Double>();
         List<Double> y = new ArrayList<Double>();
         Map<Double, Integer> treeMap = new TreeMap<>(finishedSimulationTimes);
@@ -122,15 +115,12 @@ public class Lambda {
 
         //System.out.println("Starting " + getClass().getSimpleName());
         simulation = new CloudSim();
-
-        this.hostList = new ArrayList<>();
         this.vmList = new ArrayList<>();
         this.cloudletList = new ArrayList<>();
         this.datacenterList = new ArrayList<>();
         this.finishedSimulationTimes = new HashMap<>();
         this.weibullDistList = new ArrayList<>();
 
-        brokers = createBrokers();
         createWeibullDist();
         createDatacenter();
 
@@ -288,17 +278,6 @@ public class Lambda {
         cloudlet.setSubmissionDelay(weibullDistList.get((int)id));
         cloudlet.setExecStartTime(weibullDistList.get((int)id));
         return cloudlet;
-    }
-
-    private List<DatacenterBroker> createBrokers() {
-        final List<DatacenterBroker> list = new ArrayList<>(BROKERS);
-
-        for(int i=0; i<BROKERS; i++) {
-            final DatacenterBroker broker = new DatacenterBrokerSimple(simulation);
-            list.add(broker);
-        }
-        return list;
-
     }
 
     /**

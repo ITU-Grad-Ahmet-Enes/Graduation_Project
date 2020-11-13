@@ -91,7 +91,6 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      */
     @Override
     protected Datacenter defaultDatacenterMapper(final Datacenter lastDatacenter, final Vm vm) {
-        System.out.println("buradamıyız5");
         if(getDatacenterList().isEmpty()) {
             throw new IllegalStateException("You don't have any Datacenter created.");
         }
@@ -120,7 +119,6 @@ public class DatacenterBrokerSimple extends DatacenterBrokerAbstract {
      */
     @Override
     protected Vm defaultVmMapper(final Cloudlet cloudlet) {
-        System.out.println("buradamıyız");
         if (cloudlet.isBoundToVm()) {
             return cloudlet.getVm();
         }
