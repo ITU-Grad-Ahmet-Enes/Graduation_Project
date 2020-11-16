@@ -25,7 +25,6 @@ import org.cloudbus.cloudsim.utilizationmodels.UtilizationModelDynamic;
 import org.cloudbus.cloudsim.utilizationmodels.UtilizationModelFull;
 import org.cloudbus.cloudsim.vms.Vm;
 import org.cloudbus.cloudsim.vms.VmSimple;
-import org.cloudsimplus.builders.tables.CloudletsTableBuilder;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -36,7 +35,7 @@ import java.util.*;
 public class LambdaMultipleBroker {
 
     // Number of broker
-    private static final int BROKERS_NUMBER = 1;
+    private static final int NUMBER_OF_BROKERS = 2;
 
     // Number of HAPS and BASE Stations
     private final int NUMBER_OF_BASE;
@@ -44,14 +43,14 @@ public class LambdaMultipleBroker {
 
     // Properties of HOSTS
     private int HOST_BASE_NUMBER = 20;
-    private final int HOST_BASE_PES_NUMBER = BROKERS_NUMBER; // Host bulamama yani VM droplama gibi sorunlar ile karşılaşmamk için broker sayısı kadar HOST PEsimiz olması lazım
+    private final int HOST_BASE_PES_NUMBER = NUMBER_OF_BROKERS; // Host bulamama yani VM droplama gibi sorunlar ile karşılaşmamk için broker sayısı kadar HOST PEsimiz olması lazım
     private final long mipsBaseHost = 1000;
     private final long ramBaseHost = 2048;
     private final long storageBaseHost = 1000000;
     private final long bwBaseHost = 10000;
 
     private int HOST_HAPS_NUMBER = 5;
-    private final int HOST_HAPS_PES_NUMBER = BROKERS_NUMBER;
+    private final int HOST_HAPS_PES_NUMBER = NUMBER_OF_BROKERS;
     private final long mipsHAPSHost;
     private final long ramHAPSHost;
     private final long storageHAPSHost;
@@ -59,14 +58,14 @@ public class LambdaMultipleBroker {
 
     // Properties of VMS
     private final int VMS_BASE_NUMBER;
-    private final int VM_BASE_PES_NUMBER = HOST_BASE_PES_NUMBER/BROKERS_NUMBER;
+    private final int VM_BASE_PES_NUMBER = HOST_BASE_PES_NUMBER/ NUMBER_OF_BROKERS;
     private final int mipsBaseVm = 1000;
     private final long sizeBaseVm = 10000;
     private final int ramBaseVm = 512;
     private final long bwBaseVm = 1000;
 
     private final int VMS_HAPS_NUMBER;
-    private final int VM_HAPS_PES_NUMBER = HOST_HAPS_PES_NUMBER/BROKERS_NUMBER;
+    private final int VM_HAPS_PES_NUMBER = HOST_HAPS_PES_NUMBER/ NUMBER_OF_BROKERS;
     private final int mipsHAPSVm;
     private final long sizeHAPSVm;
     private final int ramHAPSVm;
@@ -91,12 +90,13 @@ public class LambdaMultipleBroker {
         weibullDistribution = new WeibullDistribution(rg,1.0,25, WeibullDistribution.DEFAULT_INVERSE_ABSOLUTE_ACCURACY);
         DecimalFormat newFormat = new DecimalFormat("#.#");
         List<LambdaMultipleBroker> simulationList = new ArrayList<>(10);
-        for(int j=0; j<10; j++ ) {
-            if(j < 5) {
+        for(int j=0; j<20; j++ ) {
+            if(j < 10) {
                 if(j==0) {
                     try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",false))){
-                        br.write("Base station number is increasing, HAPS rate is always 25%");
-                        br.newLine();
+                        /*br.write("Base station number is increasing, HAPS rate is always 25%");
+                        br.newLine();*/
+                        br.write(NUMBER_OF_BROKERS + "\n");
                     }
                 }
 
@@ -110,15 +110,15 @@ public class LambdaMultipleBroker {
                     );
                 }
             } else {
-                if(j==5) {
+                if(j==10) {
                     try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))){
-                        br.newLine();
+                        /*br.newLine();
                         br.write("HAPS power is increasing, Base stations is constant.");
-                        br.newLine();
+                        br.newLine();*/
                     }
                 }
 
-                int baseFactor = 2;
+                int baseFactor = 1;
                 int HAPSPowerFactor = (j-4) * 5;
                 for(double i=0.0; i<1.0; i+=0.1) {
                     //double twoDecimal =  Double.parseDouble(newFormat.format(i));
@@ -131,7 +131,9 @@ public class LambdaMultipleBroker {
 
         }
         simulationList.parallelStream().forEach(LambdaMultipleBroker::run);
-        simulationList.forEach(LambdaMultipleBroker::printResults);
+        //simulationList.forEach(LambdaMultipleBroker::printResults);
+        simulationList.forEach(LambdaMultipleBroker::printResultsOnlyTimes);
+
     }
 
     private LambdaMultipleBroker(double lambda, int baseFactor, int HAPSPowerFactor) {
@@ -168,7 +170,7 @@ public class LambdaMultipleBroker {
     }
 
     public void createWeibullDist() {
-        for(int i=0; i<NUMBER_OF_CLOUDLETS*BROKERS_NUMBER; i++) {
+        for(int i = 0; i<NUMBER_OF_CLOUDLETS* NUMBER_OF_BROKERS; i++) {
             weibullDistList.add((int)weibullDistribution.sample());
         }
     }
@@ -177,7 +179,61 @@ public class LambdaMultipleBroker {
         simulation.start();
     }
 
+    private void printResultsOnlyTimes(){
+        for (DatacenterBroker broker : brokers) {
+            /*
+            String title = " Simulation with lambda " + ((DatacenterBrokerLambda) broker).getLambdaValue();
+            new CloudletsTableBuilder(broker.getCloudletFinishedList())
+                    .setTitle(broker.getName() + title)
+                    .build();
+            */
+            List<Cloudlet> sortedFinishedCloudletList;
+            sortedFinishedCloudletList = broker.getCloudletFinishedList();
+            sortedFinishedCloudletList.sort(Comparator.comparingDouble(Cloudlet::getActualCpuTime));
 
+            DecimalFormat df = new DecimalFormat("#.##");
+
+            if(brokerLambdaFinishTimes.containsKey(((DatacenterBrokerLambda) broker).getLambdaValue())) {
+                brokerLambdaFinishTimes.get(((DatacenterBrokerLambda) broker).getLambdaValue()).put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime()).replaceAll(",", ".")));
+            } else {
+                Map<Long,Double> brokerFinishTime = new TreeMap<>();
+                brokerFinishTime.put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime()).replaceAll(",", ".")));
+                brokerLambdaFinishTimes.put(((DatacenterBrokerLambda) broker).getLambdaValue(),brokerFinishTime);
+            }
+
+            //if(((DatacenterBrokerLambda) broker).getLambdaValue() == 1.0) {
+            if(brokerLambdaFinishTimes.size() == 11){
+                if(brokerLambdaFinishTimes.get(1.0).size() == NUMBER_OF_BROKERS) {
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))) {
+                        //br.newLine();
+
+                        // First Base Properties
+                        br.write(NUMBER_OF_BASE + "," + HOST_BASE_NUMBER + "," + VMS_BASE_NUMBER + "," + mipsBaseHost + ","
+                                + ramBaseHost + "," + storageBaseHost + "," + bwBaseHost + "," + mipsBaseVm + "," + sizeBaseVm
+                                + "," + ramBaseVm + "," + bwBaseVm );
+                        br.newLine();
+
+                        // Second HAPS Properties
+                        br.write(NUMBER_OF_HAPS + "," + HOST_HAPS_NUMBER + "," + VMS_HAPS_NUMBER + "," + mipsHAPSHost + ","
+                                + ramHAPSHost + "," + storageHAPSHost + "," + bwHAPSHost + "," + mipsHAPSVm + "," + sizeHAPSVm + ","
+                                + ramHAPSVm + "," + bwHAPSVm);
+                        br.newLine();
+                        for(Map.Entry entry : brokerLambdaFinishTimes.entrySet()) {
+
+                            for(Map.Entry value : ((Map<Long, Integer>)entry.getValue()).entrySet()) {
+                                br.write("" + value.getValue());
+                                br.newLine();
+                            }
+                        }
+                        br.flush();
+                        brokerLambdaFinishTimes.clear();
+                    } catch (IOException e) {
+                        System.out.println("Unable to read file ");
+                    }
+                }
+            }
+        }
+    }
 
     private void printResults() {
         for (DatacenterBroker broker : brokers) {
@@ -194,67 +250,69 @@ public class LambdaMultipleBroker {
             DecimalFormat df = new DecimalFormat("#.##");
 
             if(brokerLambdaFinishTimes.containsKey(((DatacenterBrokerLambda) broker).getLambdaValue())) {
-                brokerLambdaFinishTimes.get(((DatacenterBrokerLambda) broker).getLambdaValue()).put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime())));
+                brokerLambdaFinishTimes.get(((DatacenterBrokerLambda) broker).getLambdaValue()).put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime()).replaceAll(",", ".")));
             } else {
                 Map<Long,Double> brokerFinishTime = new TreeMap<>();
-                brokerFinishTime.put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime())));
+                brokerFinishTime.put(broker.getId(), Double.valueOf(df.format(sortedFinishedCloudletList.get(NUMBER_OF_CLOUDLETS-1).getActualCpuTime()).replaceAll(",", ".")));
                 brokerLambdaFinishTimes.put(((DatacenterBrokerLambda) broker).getLambdaValue(),brokerFinishTime);
             }
 
-            if(((DatacenterBrokerLambda) broker).getLambdaValue() == 1.0) {
-                try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))) {
-                    br.newLine();
-                    br.write("Base Stations Properties \n" +
-                            "------------------------------------------\n" +
-                            "Number of Stations: " + NUMBER_OF_BASE +
-                            ", Number of Hosts: " + HOST_BASE_NUMBER +
-                            ", Number of Vms: " + VMS_BASE_NUMBER +
-                            ", Mips for Host: " + mipsBaseHost +
-                            ", Ram for Host: " + ramBaseHost +
-                            ", Storage for Host: " + storageBaseHost +
-                            ", BW for Host: " + bwBaseHost +
-                            ", Mips for Vm: " + mipsBaseVm +
-                            ", Size for Vm: " + sizeBaseVm +
-                            ", Ram for Vm: " + ramBaseVm +
-                            ", BW for Vm: " + bwBaseVm + "\n");
-                    br.newLine();
-                    br.write("HAPS Stations Properties \n" +
-                            "------------------------------------------\n" +
-                            "Number of Stations: " + NUMBER_OF_HAPS +
-                            ", Number of Hosts: " + HOST_HAPS_NUMBER +
-                            ", Number of Vms: " + VMS_HAPS_NUMBER +
-                            ", Mips for Host: " + mipsHAPSHost +
-                            ", Ram for Host: " + ramHAPSHost +
-                            ", Storage for Host: " + storageHAPSHost +
-                            ", BW for Host: " + bwHAPSHost +
-                            ", Mips for Vm: " + mipsHAPSVm +
-                            ", Size for Vm: " + sizeHAPSVm +
-                            ", Ram for Vm: " + ramHAPSVm +
-                            ", BW for Vm: " + bwHAPSVm + "\n");
-                    br.newLine();
-                    br.write("Lambda Results \n" +
-                            "------------------------------------------");
-                    br.newLine();
-                    for(Map.Entry entry : brokerLambdaFinishTimes.entrySet()) {
-                        br.write("For Lambda: " + entry.getKey());
+            if(brokerLambdaFinishTimes.size() == 11){
+                if(brokerLambdaFinishTimes.get(1.0).size() == NUMBER_OF_BROKERS) {
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))) {
                         br.newLine();
-                        for(Map.Entry value : ((Map<Long, Integer>)entry.getValue()).entrySet()) {
-                            br.write("Broker ID: " + value.getKey() + ", Finish Time: " + value.getValue());
+                        br.write("Base Stations Properties \n" +
+                                "------------------------------------------\n" +
+                                "Number of Stations: " + NUMBER_OF_BASE +
+                                ", Number of Hosts: " + HOST_BASE_NUMBER +
+                                ", Number of Vms: " + VMS_BASE_NUMBER +
+                                ", Mips for Host: " + mipsBaseHost +
+                                ", Ram for Host: " + ramBaseHost +
+                                ", Storage for Host: " + storageBaseHost +
+                                ", BW for Host: " + bwBaseHost +
+                                ", Mips for Vm: " + mipsBaseVm +
+                                ", Size for Vm: " + sizeBaseVm +
+                                ", Ram for Vm: " + ramBaseVm +
+                                ", BW for Vm: " + bwBaseVm + "\n");
+                        br.newLine();
+                        br.write("HAPS Stations Properties \n" +
+                                "------------------------------------------\n" +
+                                "Number of Stations: " + NUMBER_OF_HAPS +
+                                ", Number of Hosts: " + HOST_HAPS_NUMBER +
+                                ", Number of Vms: " + VMS_HAPS_NUMBER +
+                                ", Mips for Host: " + mipsHAPSHost +
+                                ", Ram for Host: " + ramHAPSHost +
+                                ", Storage for Host: " + storageHAPSHost +
+                                ", BW for Host: " + bwHAPSHost +
+                                ", Mips for Vm: " + mipsHAPSVm +
+                                ", Size for Vm: " + sizeHAPSVm +
+                                ", Ram for Vm: " + ramHAPSVm +
+                                ", BW for Vm: " + bwHAPSVm + "\n");
+                        br.newLine();
+                        br.write("Lambda Results \n" +
+                                "------------------------------------------");
+                        br.newLine();
+                        for(Map.Entry entry : brokerLambdaFinishTimes.entrySet()) {
+                            br.write("For Lambda: " + entry.getKey());
                             br.newLine();
+                            for(Map.Entry value : ((Map<Long, Integer>)entry.getValue()).entrySet()) {
+                                br.write("Broker ID: " + value.getKey() + ", Finish Time: " + value.getValue());
+                                br.newLine();
+                            }
                         }
+                        br.flush();
+                        brokerLambdaFinishTimes.clear();
+                    } catch (IOException e) {
+                        System.out.println("Unable to read file ");
                     }
-                    br.flush();
-                    brokerLambdaFinishTimes.clear();
-                } catch (IOException e) {
-                    System.out.println("Unable to read file ");
                 }
             }
         }
     }
 
     private List<DatacenterBroker> createBrokers(double lamda) {
-        final List<DatacenterBroker> list = new ArrayList<>(BROKERS_NUMBER);
-        for(int i = 0; i < BROKERS_NUMBER; i++) {
+        final List<DatacenterBroker> list = new ArrayList<>(NUMBER_OF_BROKERS);
+        for(int i = 0; i < NUMBER_OF_BROKERS; i++) {
             DatacenterBroker broker = new DatacenterBrokerLambda(simulation,"",NUMBER_OF_HAPS,NUMBER_OF_BASE,VMS_HAPS_NUMBER,VMS_BASE_NUMBER);
             broker.setLocation(new Location(15.0,60.0,0.0));
             ((DatacenterBrokerLambda) broker).setLambdaValue(lamda);
