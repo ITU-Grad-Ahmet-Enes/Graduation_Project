@@ -9,38 +9,24 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="Example1 Update">
-      <change afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/LambdaMultipleBroker.java" afterDir="false" />
+    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="Some Fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/examples/ParallelSimulationsExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/examples/ParallelSimulationsExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/examples/brokers/MultipleBrokers3.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/examples/brokers/MultipleBrokers3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/Lambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/Lambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/examples/ParallelSimulationsExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/examples/ParallelSimulationsExample.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/examples/brokers/MultipleBrokers3.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/examples/brokers/MultipleBrokers3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/Lambda.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/Lambda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerLambda.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerLambda.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus/target/classes/org/cloudbus/cloudsim/brokers/DatacenterBrokerSimple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lambda.png" beforeDir="false" afterPath="$PROJECT_DIR$/lambda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/cloudsim-plus-haps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/cloudsim-plus-haps.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloudsim-plus-modules.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-modules.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -50,13 +36,25 @@
       </list>
     </option>
   </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="a70012c2-699a-4c72-89a3-ac520509581d" />
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Users\ahmet\AppData\Local\JetBrains\Toolbox\apps\IDEA-U\ch-0\202.6948.69\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -68,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Java/javafx-sdk-11.0.2" />
@@ -79,10 +78,10 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
   <component name="RunManager" selected="Application.LambdaMultipleBroker">
     <configuration default="true" type="Applet">
@@ -108,7 +107,7 @@
     <configuration name="LambdaMultipleBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.haps.LambdaMultipleBroker" />
       <module name="cloudsim-plus-haps" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Xmx4096m" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.cloudsimplus.haps.*" />
@@ -133,27 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultipleBrokers2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.examples.brokers.MultipleBrokers2" />
+    <configuration name="ParallelSimulationsExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.examples.ParallelSimulationsExample" />
       <module name="cloudsim-plus-haps" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.cloudsimplus.examples.brokers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MultipleBrokers3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.examples.brokers.MultipleBrokers3" />
-      <module name="cloudsim-plus-haps" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cloudsimplus.examples.brokers.*" />
+          <option name="PATTERN" value="org.cloudsimplus.examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -167,12 +152,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="cloudsim-plus" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cloudsim-plus-modules" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
@@ -192,13 +234,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Lambda" />
+      <item itemvalue="Application.LambdaMultipleBroker" />
+      <item itemvalue="Application.MultipleBrokers1" />
+      <item itemvalue="Application.ParallelSimulationsExample" />
+      <item itemvalue="Python.plot" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LambdaMultipleBroker" />
-        <item itemvalue="Application.Lambda" />
-        <item itemvalue="Application.MultipleBrokers3" />
-        <item itemvalue="Application.MultipleBrokers2" />
-        <item itemvalue="Application.MultipleBrokers1" />
+        <item itemvalue="Python.plot" />
+        <item itemvalue="Python.plot" />
+        <item itemvalue="Python.plot" />
+        <item itemvalue="Python.plot" />
       </list>
     </recent_temporary>
   </component>
@@ -245,17 +294,10 @@
       <workItem from="1604218138724" duration="613000" />
       <workItem from="1604222058646" duration="7780000" />
       <workItem from="1604240566290" duration="5171000" />
-      <workItem from="1604485820551" duration="701000" />
-      <workItem from="1604486819520" duration="1624000" />
-      <workItem from="1605117974711" duration="1859000" />
-      <workItem from="1605123901940" duration="11356000" />
-      <workItem from="1605171653562" duration="9778000" />
-      <workItem from="1605187547598" duration="8642000" />
-      <workItem from="1605199527982" duration="14752000" />
-      <workItem from="1605244927100" duration="5797000" />
-      <workItem from="1605253788134" duration="3609000" />
-      <workItem from="1605267657692" duration="6851000" />
-      <workItem from="1605275741436" duration="17000" />
+      <workItem from="1605280553246" duration="3046000" />
+      <workItem from="1605531136601" duration="5605000" />
+      <workItem from="1605537968766" duration="20664000" />
+      <workItem from="1605700115514" duration="2997000" />
     </task>
     <task id="LOCAL-00001" summary="Example1 Update">
       <created>1602675006144</created>
@@ -264,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602675006144</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Plotting and Some Fixes">
+      <created>1605558620180</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605558620180</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Some Fixes">
+      <created>1605703080780</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605703080780</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,92 +340,102 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Example1 Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Example1 Update" />
+    <MESSAGE value="Plotting" />
+    <MESSAGE value="Plotting and Some Fixes" />
+    <MESSAGE value="Some Fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some Fixes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1603220493683">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1605538226327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1603220493683" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1605538226327" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605702136149">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605702136149" />
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605702119098">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605702119098" />
     <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser" timestamp="1603211003344">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602660402558" />
     <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603211003344" />
-    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1605257927866">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605257927866" />
     <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1603220038751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603220038751" />
-    <state width="474" height="466" key="DebuggerActiveHint" timestamp="1603138686630">
+    <state width="1060" height="466" key="DebuggerActiveHint" timestamp="1605557268913">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="474" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602622054804" />
-    <state width="474" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1603138686630" />
+    <state width="1060" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1605557268913" />
     <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1603220179377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603220179377" />
-    <state width="1877" height="342" key="GridCell.Tab.0.bottom" timestamp="1605275712857">
+    <state width="1877" height="291" key="GridCell.Tab.0.bottom" timestamp="1605703033986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="342" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605275712857" />
-    <state width="1877" height="342" key="GridCell.Tab.0.center" timestamp="1605275712857">
+    <state width="1877" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
+    <state width="1877" height="291" key="GridCell.Tab.0.center" timestamp="1605703033986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="138" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="342" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605275712857" />
-    <state width="1877" height="342" key="GridCell.Tab.0.left" timestamp="1605275712857">
+    <state width="1877" height="302" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
+    <state width="1877" height="291" key="GridCell.Tab.0.left" timestamp="1605703033986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="138" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="342" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605275712857" />
-    <state width="1877" height="342" key="GridCell.Tab.0.right" timestamp="1605275712857">
+    <state width="1877" height="302" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
+    <state width="1877" height="291" key="GridCell.Tab.0.right" timestamp="1605703033986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="138" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="342" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605275712857" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom" timestamp="1605258103871">
+    <state width="1877" height="302" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1605558932514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="410" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="245" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605258103871" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center" timestamp="1605258103871">
+    <state width="1877" height="302" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
+    <state width="1877" height="314" key="GridCell.Tab.1.center" timestamp="1605558932514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="410" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="245" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605258103871" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left" timestamp="1605258103871">
+    <state width="1877" height="302" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
+    <state width="1877" height="314" key="GridCell.Tab.1.left" timestamp="1605558932514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="410" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="245" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605258103871" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right" timestamp="1605258103871">
+    <state width="1877" height="302" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
+    <state width="1877" height="314" key="GridCell.Tab.1.right" timestamp="1605558932514">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="410" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605216047951" />
-    <state width="1877" height="245" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605258103871" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602675006364">
+    <state width="1877" height="302" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
+    <state width="1877" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605702103090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602675006364" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602674983723">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605702103090" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605703086347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602674983723" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605703086347" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605558511011">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605558511011" />
     <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602621574623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602621574623" />
-    <state x="222" y="0" width="1276" height="1028" key="dock-window-1" timestamp="1605275758497">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="1913" y="0" width="1109" height="1047" key="dock-window-1" timestamp="1604244720205">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2174" y="283" width="1276" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1605200396013" />
-    <state x="222" y="0" width="1276" height="1028" key="dock-window-1/0.0.1920.1040@0.0.1920.1040" timestamp="1605275758497" />
+    <state x="1913" y="0" width="1109" height="1047" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604244720205" />
     <state x="690" y="275" key="extract.method.dialog" timestamp="1602674227047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -378,14 +444,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="124" width="774" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604169865986" />
-    <state x="542" y="140" key="new project wizard" timestamp="1603220527687">
+    <state x="542" y="140" key="new project wizard" timestamp="1605280487513">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="542" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1603220527687" />
-    <state x="803" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1605268185827">
+    <state x="542" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1605280487513" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1605555396849">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="803" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605268185827" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605555396849" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -405,22 +471,35 @@
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/Lambda.java</url>
-          <line>116</line>
+          <url>file://$PROJECT_DIR$/cloudsim-plus/src/main/java/org/cloudbus/cloudsim/brokers/DatacenterBrokerLambda.java</url>
+          <line>86</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/LambdaMultipleBroker.java</url>
+          <line>259</line>
           <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plot.py</url>
+          <line>113</line>
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.cloudsimplus.haps.LambdaMultipleBroker" memberName="vmList" />
-      </pinned-members>
-    </pin-to-top-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="((HapsExample1)this).simulation" custom="org.cloudsimplus.haps.HapsExample1" />
         <watch expression="((CloudletsTableBuilder)this).list" custom="org.cloudsimplus.builders.tables.CloudletsTableBuilder" />
+        <watch expression="brokerLambdaFinishTimes" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$plot.coverage" NAME="plot Coverage Results" MODIFIED="1605557903775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
