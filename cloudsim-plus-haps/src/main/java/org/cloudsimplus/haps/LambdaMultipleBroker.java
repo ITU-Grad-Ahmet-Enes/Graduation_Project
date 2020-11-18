@@ -31,7 +31,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.*;
-/* ALLAH'A ŞÜKÜR sadece çizdirme var*/
+
+
 public class LambdaMultipleBroker {
 
     // Number of broker
@@ -94,8 +95,11 @@ public class LambdaMultipleBroker {
             if(j < 10) {
                 if(j==0) {
                     try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",false))){
-                        /*br.write("Base station number is increasing, HAPS rate is always 25%");
-                        br.newLine();*/
+                        br.write("Number of brokers: " + NUMBER_OF_BROKERS + "\n");
+                        br.newLine();
+                        br.write("Base station number is increasing, HAPS rate is always 25%");
+                    }
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbers.txt",false))){
                         br.write(NUMBER_OF_BROKERS + "\n");
                     }
                 }
@@ -112,14 +116,14 @@ public class LambdaMultipleBroker {
             } else {
                 if(j==10) {
                     try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))){
-                        /*br.newLine();
+                        br.newLine();
                         br.write("HAPS power is increasing, Base stations is constant.");
-                        br.newLine();*/
+                        br.newLine();
                     }
                 }
 
                 int baseFactor = 1;
-                int HAPSPowerFactor = (j-4) * 5;
+                int HAPSPowerFactor = (j-9) * 5;
                 for(double i=0.0; i<1.0; i+=0.1) {
                     //double twoDecimal =  Double.parseDouble(newFormat.format(i));
                     double twoDecimal =  Double.parseDouble(newFormat.format(i).replaceAll(",", "."));
@@ -131,7 +135,7 @@ public class LambdaMultipleBroker {
 
         }
         simulationList.parallelStream().forEach(LambdaMultipleBroker::run);
-        //simulationList.forEach(LambdaMultipleBroker::printResults);
+        simulationList.forEach(LambdaMultipleBroker::printResults);
         simulationList.forEach(LambdaMultipleBroker::printResultsOnlyTimes);
 
     }
@@ -204,7 +208,7 @@ public class LambdaMultipleBroker {
             //if(((DatacenterBrokerLambda) broker).getLambdaValue() == 1.0) {
             if(brokerLambdaFinishTimes.size() == 11){
                 if(brokerLambdaFinishTimes.get(1.0).size() == NUMBER_OF_BROKERS) {
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))) {
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbers.txt",true))) {
                         //br.newLine();
 
                         // First Base Properties
@@ -298,6 +302,9 @@ public class LambdaMultipleBroker {
                             for(Map.Entry value : ((Map<Long, Integer>)entry.getValue()).entrySet()) {
                                 br.write("Broker ID: " + value.getKey() + ", Finish Time: " + value.getValue());
                                 br.newLine();
+                                /*if(value.getKey(). == NUMBER_OF_BROKERS){
+                                    br.newLine();
+                                }*/
                             }
                         }
                         br.flush();

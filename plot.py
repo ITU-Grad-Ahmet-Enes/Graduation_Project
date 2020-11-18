@@ -27,7 +27,7 @@ Size_for_Vm_BASE = 0
 Ram_for_Vm_BASE = 0
 BW_for_Vm_BASE = 0
 
-outputFile = open("output.txt", "r")
+outputFile = open("outputOnlyNumbers.txt", "r")
 
 datasetCounter = 0
 
