@@ -31,6 +31,7 @@ import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.cloudlets.CloudletSimple;
 import org.cloudbus.cloudsim.core.CloudSim;
 import org.cloudbus.cloudsim.datacenters.Datacenter;
+import org.cloudbus.cloudsim.datacenters.DatacenterPowerSupply;
 import org.cloudbus.cloudsim.datacenters.DatacenterSimple;
 import org.cloudbus.cloudsim.hosts.Host;
 import org.cloudbus.cloudsim.hosts.HostSimple;
@@ -126,7 +127,7 @@ public class PowerExample {
     /**
      * The max number of watt-second (Ws) of power a Host uses.
      */
-    private static final int MAX_POWER_WATTS_SEC = 50;
+    private static final int MAX_POWER_WATTS_SEC = 100;
 
     private final CloudSim simulation;
     private DatacenterBroker broker0;
@@ -275,6 +276,12 @@ public class PowerExample {
             "Mean %.2f Watt-Sec for %d usage samples (%.5f KWatt-Hour)%n",
             powerWattsSecMean, utilizationPercentHistory.size(), PowerAware.wattsSecToKWattsHour(powerWattsSecMean));
         System.out.printf("----------------------------------------------------------------------------------------------------------------------%n%n");
+
+        System.out.println("getPowerSupply(): " + host.getDatacenter().getPowerSupply());
+        System.out.println("getPowerSupply().getPower(): " + host.getDatacenter().getPowerSupply().getPower());
+        System.out.println("getPowerSupply().getPowerInKWatts(): " + host.getDatacenter().getPowerSupply().getPowerInKWatts());
+        System.out.println("getPowerInKWatts: " + host.getDatacenter().getPowerInKWatts());
+        System.out.println("getPower: " + host.getDatacenter().getPower());
     }
 
     /**
@@ -288,6 +295,8 @@ public class PowerExample {
 
         final Datacenter dc = new DatacenterSimple(simulation, hostList, new VmAllocationPolicySimple());
         dc.setSchedulingInterval(SCHEDULING_INTERVAL);
+        DatacenterPowerSupply powerSupply = new DatacenterPowerSupply();
+        dc.setPowerSupply(powerSupply);
         return dc;
     }
 

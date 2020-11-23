@@ -27,6 +27,7 @@ import org.cloudbus.cloudsim.cloudlets.Cloudlet;
 import org.cloudbus.cloudsim.core.Identifiable;
 import org.cloudbus.cloudsim.vms.Vm;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 /**
@@ -89,6 +90,11 @@ public class CloudletsTableBuilder extends TableBuilderAbstract<Cloudlet> {
 
         col = getTable().addColumn("ExecTime", SECONDS).setFormat(TIME_FORMAT);
         addColumnDataFunction(col, cl -> roundTime(cl, cl.getActualCpuTime()));
+
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        addColumnDataFunction(getTable().addColumn("    Power   ","Consumption"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPower())));
+        addColumnDataFunction(getTable().addColumn("    Power   ","ConsumptionInKWatt"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPowerInKWatts())));
     }
 
     /**
