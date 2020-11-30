@@ -2,6 +2,8 @@ from mpl_toolkits import mplot3d
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 Number_of_Stations_HAPS = 0
 Number_of_Hosts_HAPS = 0
@@ -27,20 +29,49 @@ Size_for_Vm_BASE = 0
 Ram_for_Vm_BASE = 0
 BW_for_Vm_BASE = 0
 
-outputFile = open("outputOnlyNumbers.txt", "r")
+outputFile = open("outputOnlyNumbersTime.txt", "r")
+outputFile2 = open("outputOnlyNumbersEnergy.txt", "r")
 
 datasetCounter = 0
 
 array = outputFile.read().split('\n')
 array.pop()
 
+array2 = outputFile2.read().split('\n')
+array2.pop()
+
 Number_of_Brokers = int(array[0])
 Number_of_Finish_Time = int(Number_of_Brokers) * 11
 Number_of_Tests = int((len(array) - 1) / (2 + 11 * Number_of_Brokers))
 
-currentIndex = 1
+Number_of_Brokers_Energy = int(array2[0])
+Number_of_Lines = int(Number_of_Brokers_Energy) * 11 + 1
+Number_of_Tests_Energy = int((len(array2) - 1) / (1 + 11 * Number_of_Brokers_Energy))
 
 points = [[0 for x in range(11)] for y in range(Number_of_Tests)]
+points_Energy = [[0 for m in range(11)] for n in range(Number_of_Tests_Energy)]
+z_points_energy = [0 for t in range(Number_of_Tests_Energy)]
+
+currentIndexEnergy = 1
+
+for i in range(0, Number_of_Tests_Energy):
+    z_points_energy[i] = float(array2[currentIndexEnergy])
+    currentIndexEnergy += 1
+    lambdaFactorEnergy = float(0)
+    for m in range(0, 11):
+        sum = 0
+        for k in range(0, Number_of_Brokers_Energy):
+            sum += float(array2[currentIndexEnergy])
+            currentIndexEnergy += 1
+
+        sum /= Number_of_Brokers_Energy
+        sum_with_wrapping = float("{:.2f}".format(sum))
+
+        points_Energy[i][m] = [sum_with_wrapping, lambdaFactorEnergy, z_points_energy[i]]
+        lambdaFactorEnergy += 0.1
+        lambdaFactorEnergy = sum_with_wrapping = float("{:.1f}".format(lambdaFactorEnergy))
+
+currentIndex = 1
 for i in range(0, Number_of_Tests):
     for j in range(0, 3):
         if j == 0:
@@ -99,6 +130,17 @@ xdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))
 ydataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
 zdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
 
+xdataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
+ydataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
+zdataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
+
+for i in range(0, Number_of_Tests_Energy):
+    for j in range(0, 11):
+        point = points_Energy[i][j]
+        xdataThirdTest[i][j] = point[0]
+        ydataThirdTest[i][j] = point[1]
+        zdataThirdTest[i][j] = point[2]
+
 for i in range(0, Number_of_Tests):
     for j in range(0, 11):
         point = points[i][j]
@@ -111,26 +153,65 @@ for i in range(0, Number_of_Tests):
             ydataSecondTest[i-10][j] = point[1]
             zdataSecondTest[i-10][j] = point[2]
 
-fig = plt.figure(figsize=plt.figaspect(1))
+# fig1 = plt.figure(1)
+# ax1 = fig1.add_subplot(111, projection='3d')
+# for i in range(0,int(Number_of_Tests/2)):
+#     ax1 = plt.gca(projection="3d")
+#     ax1.scatter(ydataFirstTest[i], xdataFirstTest[i], zdataFirstTest[i], c='r', marker='o', s=100)
+#     ax1.set_xlabel('X Lambda')
+#     ax1.set_ylabel('Y Time')
+#     ax1.set_zlabel('Z Number of Base')
+#     ax1.plot(ydataFirstTest[i], xdataFirstTest[i], zdataFirstTest[i], color='r')
+#
+# fig2 = plt.figure(2)
+# ax2 = fig2.add_subplot(111, projection='3d')
+# for i in range(0,int(Number_of_Tests/2)):
+#     ax2 = plt.gca(projection="3d")
+#     ax2.scatter(ydataSecondTest[i], xdataSecondTest[i], zdataSecondTest[i], c='r', marker='o', s=100)
+#     ax2.set_xlabel('X Lambda')
+#     ax2.set_ylabel('Y Time')
+#     ax2.set_zlabel('Z HAPS/BASE Power')
+#     ax2.plot(ydataSecondTest[i], xdataSecondTest[i], zdataSecondTest[i], color='r')
+#
+# fig3 = plt.figure(3)
+# ax3 = fig3.add_subplot(111, projection='3d')
+# for i in range(0, int(Number_of_Tests_Energy)):
+#     ax3 = plt.gca(projection="3d")
+#     ax3.scatter(ydataThirdTest[i], xdataThirdTest[i], zdataThirdTest[i], c='r', marker='o', s=100)
+#     ax3.set_xlabel('X Lambda')
+#     ax3.set_ylabel('Y Total Energy')
+#     ax3.set_zlabel('Z MAX_HAPS_POWER_WATTS_SEC')
+#     ax3.plot(ydataThirdTest[i], xdataThirdTest[i], zdataThirdTest[i], color='r')
+#
+# plt.show()
 
-ax1 = fig.add_subplot(1, 2, 1, projection='3d')
-for i in range(0,int(Number_of_Tests/2)):
-    ax1 = plt.gca(projection="3d")
-    ax1.scatter(ydataFirstTest[i], xdataFirstTest[i], zdataFirstTest[i], c='r', marker='o', s=100)
-    ax1.set_xlabel('X Label')
-    ax1.set_ylabel('Y Label')
-    ax1.set_zlabel('Z Label')
-    ax1.plot(ydataFirstTest[i], xdataFirstTest[i], zdataFirstTest[i], color='r')
 
-ax2 = fig.add_subplot(1, 2, 2, projection='3d')
-for i in range(0,int(Number_of_Tests/2)):
-    ax2 = plt.gca(projection="3d")
-    ax2.scatter(ydataSecondTest[i], xdataSecondTest[i], zdataSecondTest[i], c='r', marker='o', s=100)
-    ax2.set_xlabel('X Label')
-    ax2.set_ylabel('Y Label')
-    ax2.set_zlabel('Z Label')
-    ax2.plot(ydataSecondTest[i], xdataSecondTest[i], zdataSecondTest[i], color='r')
-
-plt.show()
-
-
+fig = go.Figure()
+for i in range(0,Number_of_Tests_Energy):
+    fig.add_trace(go.Scatter3d(x=ydataFirstTest[i], y=xdataFirstTest[i], z=zdataFirstTest[i],
+                               mode='lines+markers'))
+fig.update_layout(
+    title_text="X_Lambda, Y_Time, Z_Number of Base",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
+for i in range(0,Number_of_Tests_Energy):
+    fig.add_trace(go.Scatter3d(x=ydataSecondTest[i], y=xdataSecondTest[i], z=zdataSecondTest[i],
+                               mode='lines+markers'))
+fig.update_layout(
+    title_text="X_Lambda, Y_Time, Z_HAPS/BASE Power",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
+for i in range(0,Number_of_Tests_Energy):
+    fig.add_trace(go.Scatter3d(x=ydataThirdTest[i], y=xdataThirdTest[i], z=zdataThirdTest[i],
+                               mode='lines+markers'))
+fig.update_layout(
+    title_text="X_Lambda, Y_Total Energy Consumption, Z_MAX_HAPS_POWER_WATTS_SEC",
+    width=1800,
+)
+fig.show()

@@ -93,8 +93,8 @@ public class CloudletsTableBuilder extends TableBuilderAbstract<Cloudlet> {
 
         DecimalFormat df = new DecimalFormat("#.##");
 
-        addColumnDataFunction(getTable().addColumn("    Power   ","Consumption"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPower())));
-        addColumnDataFunction(getTable().addColumn("    Power   ","ConsumptionInKWatt"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPowerInKWatts())));
+        addColumnDataFunction(getTable().addColumn("    Power   ","Consumption"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPower()).replaceAll(",", ".")));
+        addColumnDataFunction(getTable().addColumn("    Power   ","ConsumptionInKWatt"), cloudlet -> Double.valueOf(df.format(cloudlet.getVm().getHost().getDatacenter().getPowerInKWatts()).replaceAll(",", ".")));
     }
 
     /**

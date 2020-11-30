@@ -36,7 +36,7 @@ import java.util.*;
 public class LambdaMultipleBroker {
 
     // Number of broker
-    private static final int NUMBER_OF_BROKERS = 1;
+    private static final int NUMBER_OF_BROKERS = 2;
 
     // Number of HAPS and BASE Stations
     private final int NUMBER_OF_BASE;
@@ -94,12 +94,12 @@ public class LambdaMultipleBroker {
         for(int j=0; j<20; j++ ) {
             if(j < 10) {
                 if(j==0) {
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",false))){
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputTime.txt",false))){
                         br.write("Number of brokers: " + NUMBER_OF_BROKERS + "\n");
                         br.newLine();
                         br.write("Base station number is increasing, HAPS rate is always 25%");
                     }
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbers.txt",false))){
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbersTime.txt",false))){
                         br.write(NUMBER_OF_BROKERS + "\n");
                     }
                 }
@@ -115,7 +115,7 @@ public class LambdaMultipleBroker {
                 }
             } else {
                 if(j==10) {
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))){
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputTime.txt",true))){
                         br.newLine();
                         br.write("HAPS power is increasing, Base stations is constant.");
                         br.newLine();
@@ -208,7 +208,7 @@ public class LambdaMultipleBroker {
             //if(((DatacenterBrokerLambda) broker).getLambdaValue() == 1.0) {
             if(brokerLambdaFinishTimes.size() == 11){
                 if(brokerLambdaFinishTimes.get(1.0).size() == NUMBER_OF_BROKERS) {
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbers.txt",true))) {
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputOnlyNumbersTime.txt",true))) {
                         //br.newLine();
 
                         // First Base Properties
@@ -263,7 +263,7 @@ public class LambdaMultipleBroker {
 
             if(brokerLambdaFinishTimes.size() == 11){
                 if(brokerLambdaFinishTimes.get(1.0).size() == NUMBER_OF_BROKERS) {
-                    try(BufferedWriter br = new BufferedWriter(new FileWriter("output.txt",true))) {
+                    try(BufferedWriter br = new BufferedWriter(new FileWriter("outputTime.txt",true))) {
                         br.newLine();
                         br.write("Base Stations Properties \n" +
                                 "------------------------------------------\n" +
