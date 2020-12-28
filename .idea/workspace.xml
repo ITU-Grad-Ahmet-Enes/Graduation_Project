@@ -13,12 +13,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="Some Fixes">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_2_2.xml" afterDir="false" />
+    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="Output Files">
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/10outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/1outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/2outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/3outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/4outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/5outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/6outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/7outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/8outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/9outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Standart Deviation/error_bars.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/LambdaPowerConsumptionWithPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/LambdaPowerConsumptionWithPower.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/outputEnergyPower.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/outputOnlyNumbersEnergyPower.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-haps/cloudsim-plus-haps.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-haps/cloudsim-plus-haps.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloudsim-plus-modules.iml" beforeDir="false" afterPath="$PROJECT_DIR$/cloudsim-plus-modules.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputEnergy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputEnergy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputOnlyNumbersEnergy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputOnlyNumbersEnergy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +64,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="JupyterTrust" id="a70012c2-699a-4c72-89a3-ac520509581d" />
   <component name="MavenImportPreferences">
@@ -69,7 +85,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Java/javafx-sdk-11.0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Standart Deviation" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -78,20 +94,26 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
   </component>
-  <component name="RunManager" selected="Application.LambdaMultipleBroker">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MENES\Graduation_Project\Standart Deviation" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.plot">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lambda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.haps.Lambda" />
+    <configuration name="LambdaPowerConsumption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.haps.LambdaPowerConsumption" />
       <module name="cloudsim-plus-haps" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -104,41 +126,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LambdaMultipleBroker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.haps.LambdaMultipleBroker" />
+    <configuration name="LambdaPowerConsumptionWithPower" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.haps.LambdaPowerConsumptionWithPower" />
       <module name="cloudsim-plus-haps" />
-      <option name="VM_PARAMETERS" value="-Xmx4096m" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.cloudsimplus.haps.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MultipleBrokers1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.examples.brokers.MultipleBrokers1" />
-      <module name="cloudsim-plus-haps" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cloudsimplus.examples.brokers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParallelSimulationsExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.cloudsimplus.examples.ParallelSimulationsExample" />
-      <module name="cloudsim-plus-haps" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.cloudsimplus.examples.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,15 +146,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,6 +178,50 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="error_bars - Copy" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cloudsim-plus-modules" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Standart Deviation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Standart Deviation/error_bars - Copy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="error_bars" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cloudsim-plus-modules" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Standart Deviation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Standart Deviation/error_bars.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -235,19 +271,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Lambda" />
-      <item itemvalue="Application.LambdaMultipleBroker" />
-      <item itemvalue="Application.MultipleBrokers1" />
-      <item itemvalue="Application.ParallelSimulationsExample" />
+      <item itemvalue="Application.LambdaPowerConsumption" />
+      <item itemvalue="Application.LambdaPowerConsumptionWithPower" />
       <item itemvalue="Python.plot" />
+      <item itemvalue="Python.error_bars" />
+      <item itemvalue="Python.error_bars - Copy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LambdaMultipleBroker" />
         <item itemvalue="Python.plot" />
-        <item itemvalue="Python.plot" />
-        <item itemvalue="Python.plot" />
-        <item itemvalue="Python.plot" />
+        <item itemvalue="Python.error_bars" />
+        <item itemvalue="Python.error_bars - Copy" />
+        <item itemvalue="Application.LambdaPowerConsumptionWithPower" />
+        <item itemvalue="Application.LambdaPowerConsumption" />
       </list>
     </recent_temporary>
   </component>
@@ -298,6 +334,31 @@
       <workItem from="1605531136601" duration="5605000" />
       <workItem from="1605537968766" duration="20664000" />
       <workItem from="1605700115514" duration="2997000" />
+      <workItem from="1606726606365" duration="261000" />
+      <workItem from="1606729521727" duration="11578000" />
+      <workItem from="1606751061910" duration="2415000" />
+      <workItem from="1606753688612" duration="5268000" />
+      <workItem from="1606763263515" duration="33000" />
+      <workItem from="1606775904773" duration="7000" />
+      <workItem from="1606819691981" duration="5000" />
+      <workItem from="1606908505947" duration="3175000" />
+      <workItem from="1606917391042" duration="1000" />
+      <workItem from="1607357875288" duration="1000" />
+      <workItem from="1607525530476" duration="89000" />
+      <workItem from="1607769467257" duration="14000" />
+      <workItem from="1608106517339" duration="4251000" />
+      <workItem from="1608120132159" duration="353000" />
+      <workItem from="1608121197566" duration="2139000" />
+      <workItem from="1608381776548" duration="3000" />
+      <workItem from="1608396923120" duration="1000" />
+      <workItem from="1608397572732" duration="5000" />
+      <workItem from="1608496065229" duration="17000" />
+      <workItem from="1608503317903" duration="3000" />
+      <workItem from="1608588523644" duration="3000" />
+      <workItem from="1608655475104" duration="78000" />
+      <workItem from="1609101527122" duration="11167000" />
+      <workItem from="1609136393766" duration="8337000" />
+      <workItem from="1609156964995" duration="981000" />
     </task>
     <task id="LOCAL-00001" summary="Example1 Update">
       <created>1602675006144</created>
@@ -320,7 +381,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605703080780</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Energy Consumption">
+      <created>1606758124863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606758124863</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Output Files">
+      <created>1606758834126</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606758834126</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,13 +418,16 @@
     <MESSAGE value="Plotting" />
     <MESSAGE value="Plotting and Some Fixes" />
     <MESSAGE value="Some Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some Fixes" />
+    <MESSAGE value="Energy Consumption" />
+    <MESSAGE value="Output Files" />
+    <MESSAGE value="LambdaPowerConsumptionWithPower and It's plotting, LambdaPowerConsumptionWithPower with Error Bars" />
+    <option name="LAST_COMMIT_MESSAGE" value="LambdaPowerConsumptionWithPower and It's plotting, LambdaPowerConsumptionWithPower with Error Bars" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1605538226327">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1606732914265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1605538226327" />
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606732914265" />
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605702136149">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -358,76 +436,88 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605702119098" />
-    <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser" timestamp="1603211003344">
+    <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser" timestamp="1608107492604">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="226" width="658" height="588" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602660402558" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1603211003344" />
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608107492604" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606729942819">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606729942819" />
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1606733874965">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606733874965" />
     <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1603220038751">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="274" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603220038751" />
-    <state width="1060" height="466" key="DebuggerActiveHint" timestamp="1605557268913">
+    <state width="1060" height="466" key="DebuggerActiveHint" timestamp="1609108279426">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="474" height="466" key="DebuggerActiveHint/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602622054804" />
-    <state width="1060" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1605557268913" />
+    <state width="1060" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1609108279426" />
     <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1603220179377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603220179377" />
-    <state width="1877" height="291" key="GridCell.Tab.0.bottom" timestamp="1605703033986">
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="291" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
-    <state width="1877" height="291" key="GridCell.Tab.0.center" timestamp="1605703033986">
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="291" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
-    <state width="1877" height="291" key="GridCell.Tab.0.left" timestamp="1605703033986">
+    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="291" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
-    <state width="1877" height="291" key="GridCell.Tab.0.right" timestamp="1605703033986">
+    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="291" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605703033986" />
-    <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1605558932514">
+    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
-    <state width="1877" height="314" key="GridCell.Tab.1.center" timestamp="1605558932514">
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.1.center" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
-    <state width="1877" height="314" key="GridCell.Tab.1.left" timestamp="1605558932514">
+    <state width="1877" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.1.left" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
-    <state width="1877" height="314" key="GridCell.Tab.1.right" timestamp="1605558932514">
+    <state width="1877" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
+    <state width="1877" height="314" key="GridCell.Tab.1.right" timestamp="1609157935417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605558932514" />
+    <state width="1877" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1605702103090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605702103090" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605703086347">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606758835864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605703086347" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605558511011">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606758835864" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1609136955742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605558511011" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1609136955742" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606726621846">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606726621846" />
     <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602621574623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -480,10 +570,10 @@
           <line>259</line>
           <option name="timeStamp" value="28" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/plot.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="60" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/LambdaPowerConsumption.java</url>
+          <line>262</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -500,6 +590,8 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$plot.coverage" NAME="plot Coverage Results" MODIFIED="1605557903775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$error_bars___Copy.coverage" NAME="error_bars - Copy Coverage Results" MODIFIED="1609138571410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Standart Deviation" />
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$error_bars.coverage" NAME="error_bars Coverage Results" MODIFIED="1609157088742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Standart Deviation" />
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$plot.coverage" NAME="plot Coverage Results" MODIFIED="1609157197447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

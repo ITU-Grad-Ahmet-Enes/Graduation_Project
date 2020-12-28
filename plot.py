@@ -31,6 +31,7 @@ BW_for_Vm_BASE = 0
 
 outputFile = open("outputOnlyNumbersTime.txt", "r")
 outputFile2 = open("outputOnlyNumbersEnergy.txt", "r")
+outputFile3 = open("outputOnlyNumbersEnergyPower.txt", "r")
 
 datasetCounter = 0
 
@@ -40,6 +41,9 @@ array.pop()
 array2 = outputFile2.read().split('\n')
 array2.pop()
 
+array3 = outputFile3.read().split('\n')
+array3.pop()
+
 Number_of_Brokers = int(array[0])
 Number_of_Finish_Time = int(Number_of_Brokers) * 11
 Number_of_Tests = int((len(array) - 1) / (2 + 11 * Number_of_Brokers))
@@ -48,14 +52,21 @@ Number_of_Brokers_Energy = int(array2[0])
 Number_of_Lines = int(Number_of_Brokers_Energy) * 11 + 1
 Number_of_Tests_Energy = int((len(array2) - 1) / (1 + 11 * Number_of_Brokers_Energy))
 
+Number_of_Brokers_Energy_Power = int(array3[0])
+Number_of_Tests_Energy_Power = int((len(array3) - 1) / (1 + 11 * Number_of_Brokers_Energy_Power))
+
 points = [[0 for x in range(11)] for y in range(Number_of_Tests)]
+
 points_Energy = [[0 for m in range(11)] for n in range(Number_of_Tests_Energy)]
 z_points_energy = [0 for t in range(Number_of_Tests_Energy)]
+
+points_Energy_Power = [[0 for l in range(11)] for b in range(Number_of_Tests_Energy_Power)]
+z_points_energy_power = [0 for c in range(Number_of_Tests_Energy_Power)]
 
 currentIndexEnergy = 1
 
 for i in range(0, Number_of_Tests_Energy):
-    z_points_energy[i] = float(array2[currentIndexEnergy])
+    z_points_energy[i] = float(array2[currentIndexEnergy]) * 0.001
     currentIndexEnergy += 1
     lambdaFactorEnergy = float(0)
     for m in range(0, 11):
@@ -70,6 +81,24 @@ for i in range(0, Number_of_Tests_Energy):
         points_Energy[i][m] = [sum_with_wrapping, lambdaFactorEnergy, z_points_energy[i]]
         lambdaFactorEnergy += 0.1
         lambdaFactorEnergy = sum_with_wrapping = float("{:.1f}".format(lambdaFactorEnergy))
+
+currentIndexEnergyPower = 1
+for i in range(0, Number_of_Tests_Energy_Power):
+    z_points_energy_power[i] = float(array3[currentIndexEnergyPower]) * 0.001
+    currentIndexEnergyPower += 1
+    lambdaFactorEnergyPower = float(0)
+    for m in range(0, 11):
+        sum = 0
+        for k in range(0, Number_of_Brokers_Energy_Power):
+            sum += float(array3[currentIndexEnergyPower])
+            currentIndexEnergyPower += 1
+
+        sum /= Number_of_Brokers_Energy_Power
+        sum_with_wrapping = float("{:.2f}".format(sum))
+
+        points_Energy_Power[i][m] = [sum_with_wrapping, lambdaFactorEnergyPower, z_points_energy_power[i]]
+        lambdaFactorEnergyPower += 0.1
+        lambdaFactorEnergyPower = sum_with_wrapping = float("{:.1f}".format(lambdaFactorEnergyPower))
 
 currentIndex = 1
 for i in range(0, Number_of_Tests):
@@ -134,12 +163,23 @@ xdataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Ener
 ydataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
 zdataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
 
+xdataFourthTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy_Power))]
+ydataFourthTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy_Power))]
+zdataFourthTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy_Power))]
+
 for i in range(0, Number_of_Tests_Energy):
     for j in range(0, 11):
         point = points_Energy[i][j]
         xdataThirdTest[i][j] = point[0]
         ydataThirdTest[i][j] = point[1]
         zdataThirdTest[i][j] = point[2]
+
+for i in range(0, Number_of_Tests_Energy_Power):
+    for j in range(0, 11):
+        point = points_Energy_Power[i][j]
+        xdataFourthTest[i][j] = point[0]
+        ydataFourthTest[i][j] = point[1]
+        zdataFourthTest[i][j] = point[2]
 
 for i in range(0, Number_of_Tests):
     for j in range(0, 11):
@@ -187,31 +227,41 @@ for i in range(0, Number_of_Tests):
 
 
 fig = go.Figure()
-for i in range(0,Number_of_Tests_Energy):
+for i in range(0, int(Number_of_Tests/2)):
     fig.add_trace(go.Scatter3d(x=ydataFirstTest[i], y=xdataFirstTest[i], z=zdataFirstTest[i],
                                mode='lines+markers'))
 fig.update_layout(
-    title_text="X_Lambda, Y_Time, Z_Number of Base",
+    title_text="1: X_Lambda, Y_Time, Z_Number of Base",
     width=1800,
 )
 fig.show()
 #######################
 fig = go.Figure()
-for i in range(0,Number_of_Tests_Energy):
+for i in range(0, int(Number_of_Tests/2)):
     fig.add_trace(go.Scatter3d(x=ydataSecondTest[i], y=xdataSecondTest[i], z=zdataSecondTest[i],
                                mode='lines+markers'))
 fig.update_layout(
-    title_text="X_Lambda, Y_Time, Z_HAPS/BASE Power",
+    title_text="2: X_Lambda, Y_Time, Z_HAPS/BASE Power",
     width=1800,
 )
 fig.show()
 #######################
 fig = go.Figure()
-for i in range(0,Number_of_Tests_Energy):
+for i in range(0, Number_of_Tests_Energy):
     fig.add_trace(go.Scatter3d(x=ydataThirdTest[i], y=xdataThirdTest[i], z=zdataThirdTest[i],
                                mode='lines+markers'))
 fig.update_layout(
-    title_text="X_Lambda, Y_Total Energy Consumption, Z_MAX_HAPS_POWER_WATTS_SEC",
+    title_text="3: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
+for i in range(0, Number_of_Tests_Energy_Power):
+    fig.add_trace(go.Scatter3d(x=ydataFourthTest[i], y=xdataFourthTest[i], z=zdataFourthTest[i],
+                               mode='lines+markers'))
+fig.update_layout(
+    title_text="4: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
     width=1800,
 )
 fig.show()
