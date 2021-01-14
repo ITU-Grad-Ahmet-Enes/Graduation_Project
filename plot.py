@@ -238,10 +238,31 @@ fig.show()
 #######################
 fig = go.Figure()
 for i in range(0, int(Number_of_Tests/2)):
+    fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i],
+                             mode='lines+markers'))
+fig.update_layout(
+    title_text="1 2d: X_Lambda, Y_Time, Z_Number of Base",
+    width=1800,
+)
+fig.show()
+
+#######################
+fig = go.Figure()
+for i in range(0, int(Number_of_Tests/2)):
     fig.add_trace(go.Scatter3d(x=ydataSecondTest[i], y=xdataSecondTest[i], z=zdataSecondTest[i],
                                mode='lines+markers'))
 fig.update_layout(
     title_text="2: X_Lambda, Y_Time, Z_HAPS/BASE Power",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
+for i in range(0, int(Number_of_Tests/2)):
+    fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i],
+                             mode='lines+markers'))
+fig.update_layout(
+    title_text="2 2d: X_Lambda, Y_Time, Z_HAPS/BASE Power",
     width=1800,
 )
 fig.show()
@@ -257,11 +278,31 @@ fig.update_layout(
 fig.show()
 #######################
 fig = go.Figure()
+for i in range(0, int(Number_of_Tests/2)):
+    fig.add_trace(go.Scatter(x=ydataThirdTest[i], y=xdataThirdTest[i],
+                             mode='lines+markers'))
+fig.update_layout(
+    title_text="3 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
 for i in range(0, Number_of_Tests_Energy_Power):
     fig.add_trace(go.Scatter3d(x=ydataFourthTest[i], y=xdataFourthTest[i], z=zdataFourthTest[i],
                                mode='lines+markers'))
 fig.update_layout(
     title_text="4: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
+    width=1800,
+)
+fig.show()
+#######################
+fig = go.Figure()
+for i in range(0, int(Number_of_Tests/2)):
+    fig.add_trace(go.Scatter(x=ydataFourthTest[i], y=xdataFourthTest[i],
+                             mode='lines+markers'))
+fig.update_layout(
+    title_text="4 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
     width=1800,
 )
 fig.show()

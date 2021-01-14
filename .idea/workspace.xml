@@ -13,27 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="Output Files">
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/10outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/1outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/2outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/3outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/4outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/5outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/6outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/7outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/8outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/9outputOnlyNumbersEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Standart Deviation/error_bars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudsim-plus-haps/src/main/java/org/cloudsimplus/haps/LambdaPowerConsumptionWithPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cloudsim-plus-haps/target/classes/org/cloudsimplus/haps/LambdaPowerConsumptionWithPower.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/outputEnergyPower.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/outputOnlyNumbersEnergyPower.txt" afterDir="false" />
+    <list default="true" id="c2d4be19-3379-4dfe-85a5-58c17f3496b0" name="Default Changelist" comment="unnecessary jupyter notebook file deleted">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputEnergy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputEnergy.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputOnlyNumbersEnergy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputOnlyNumbersEnergy.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +80,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="settings.editor.selected.configurable" value="build.tools" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -142,17 +124,6 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -358,7 +329,14 @@
       <workItem from="1608655475104" duration="78000" />
       <workItem from="1609101527122" duration="11167000" />
       <workItem from="1609136393766" duration="8337000" />
-      <workItem from="1609156964995" duration="981000" />
+      <workItem from="1609156964995" duration="1556000" />
+      <workItem from="1609324280268" duration="1503000" />
+      <workItem from="1609702929614" duration="61000" />
+      <workItem from="1609767323154" duration="78000" />
+      <workItem from="1609767826711" duration="610000" />
+      <workItem from="1609926981234" duration="2000" />
+      <workItem from="1610195711037" duration="126000" />
+      <workItem from="1610531336873" duration="3609000" />
     </task>
     <task id="LOCAL-00001" summary="Example1 Update">
       <created>1602675006144</created>
@@ -395,7 +373,28 @@
       <option name="project" value="LOCAL" />
       <updated>1606758834126</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="LambdaPowerConsumptionWithPower with error bars and plotting addded">
+      <created>1609158091388</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1609158091388</updated>
+    </task>
+    <task id="LOCAL-00007" summary="jupyter notebook file deleted">
+      <created>1609158335890</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1609158335890</updated>
+    </task>
+    <task id="LOCAL-00008" summary="jupyter notebook file deleted">
+      <created>1609158408605</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1609158408605</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,17 +420,23 @@
     <MESSAGE value="Energy Consumption" />
     <MESSAGE value="Output Files" />
     <MESSAGE value="LambdaPowerConsumptionWithPower and It's plotting, LambdaPowerConsumptionWithPower with Error Bars" />
-    <option name="LAST_COMMIT_MESSAGE" value="LambdaPowerConsumptionWithPower and It's plotting, LambdaPowerConsumptionWithPower with Error Bars" />
+    <MESSAGE value="LambdaPowerConsumptionWithPower with error bars and plotting addded" />
+    <MESSAGE value="jupyter notebook file deleted" />
+    <option name="LAST_COMMIT_MESSAGE" value="jupyter notebook file deleted" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1606732914265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/0.0.1920.1040@0.0.1920.1040" timestamp="1606732914265" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605702136149">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610195836400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605702136149" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610195836400" />
+    <state x="709" y="356" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1610195795780">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="709" y="356" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610195795780" />
     <state x="740" y="225" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1605702119098">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -462,62 +467,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603220179377" />
-    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.1.center" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.1.center" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.1.left" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.1.left" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state width="1877" height="314" key="GridCell.Tab.1.right" timestamp="1609157935417">
+    <state width="1877" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state width="1877" height="314" key="GridCell.Tab.1.right" timestamp="1610535013694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="302" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604246564650" />
-    <state width="1877" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1609157935417" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1605702103090">
+    <state width="1877" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1610535013694" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1610195773095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605702103090" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606758835864">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610195773095" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1609158480208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606758835864" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609158480208" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1609136955742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1609136955742" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606726621846">
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1609158114412">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606726621846" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1609158114412" />
     <state x="496" y="255" width="928" height="630" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1602621574623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -591,7 +596,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/cloudsim_plus_modules$error_bars___Copy.coverage" NAME="error_bars - Copy Coverage Results" MODIFIED="1609138571410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Standart Deviation" />
-    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$error_bars.coverage" NAME="error_bars Coverage Results" MODIFIED="1609157088742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Standart Deviation" />
-    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$plot.coverage" NAME="plot Coverage Results" MODIFIED="1609157197447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$error_bars.coverage" NAME="error_bars Coverage Results" MODIFIED="1610533939728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Standart Deviation" />
+    <SUITE FILE_PATH="coverage/cloudsim_plus_modules$plot.coverage" NAME="plot Coverage Results" MODIFIED="1610534346096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
