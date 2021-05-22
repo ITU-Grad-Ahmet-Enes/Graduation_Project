@@ -14,38 +14,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 5000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 361.33
-Broker ID: 2, Finish Time: 357.99
+Broker ID: 1, Finish Time: 354.99
+Broker ID: 2, Finish Time: 353.55
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 316.99
-Broker ID: 2, Finish Time: 322.77
+Broker ID: 1, Finish Time: 313.33
+Broker ID: 2, Finish Time: 309.55
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 262.99
-Broker ID: 2, Finish Time: 272.77
+Broker ID: 1, Finish Time: 274.33
+Broker ID: 2, Finish Time: 274.33
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 243.99
-Broker ID: 2, Finish Time: 225.55
+Broker ID: 1, Finish Time: 228.99
+Broker ID: 2, Finish Time: 232.33
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 196.55
-Broker ID: 2, Finish Time: 195.55
+Broker ID: 1, Finish Time: 190.11
+Broker ID: 2, Finish Time: 180.55
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 206.99
-Broker ID: 2, Finish Time: 197.33
+Broker ID: 1, Finish Time: 213.77
+Broker ID: 2, Finish Time: 211.77
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 254.33
-Broker ID: 2, Finish Time: 248.77
+Broker ID: 1, Finish Time: 256.32
+Broker ID: 2, Finish Time: 246.33
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 293.55
-Broker ID: 2, Finish Time: 304.33
+Broker ID: 1, Finish Time: 317.55
+Broker ID: 2, Finish Time: 303.77
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 352.77
-Broker ID: 2, Finish Time: 350.11
+Broker ID: 1, Finish Time: 359.99
+Broker ID: 2, Finish Time: 339.21
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 395.55
-Broker ID: 2, Finish Time: 400.33
+Broker ID: 1, Finish Time: 403.33
+Broker ID: 2, Finish Time: 394.55
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 450.77
-Broker ID: 2, Finish Time: 452.11
+Broker ID: 1, Finish Time: 440.33
+Broker ID: 2, Finish Time: 445.55
 
 Base Stations Properties 
 ------------------------------------------
@@ -58,38 +58,38 @@ Number of Stations: 10, Number of Hosts: 10, Number of Vms: 10, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 155.11
-Broker ID: 2, Finish Time: 152.99
+Broker ID: 1, Finish Time: 158.11
+Broker ID: 2, Finish Time: 156.11
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 141.77
-Broker ID: 2, Finish Time: 144.87
-For Lambda: 0.2
-Broker ID: 1, Finish Time: 118.55
-Broker ID: 2, Finish Time: 116.67
-For Lambda: 0.3
-Broker ID: 1, Finish Time: 107.21
-Broker ID: 2, Finish Time: 99.11
-For Lambda: 0.4
-Broker ID: 1, Finish Time: 79.99
-Broker ID: 2, Finish Time: 86.76
-For Lambda: 0.5
-Broker ID: 1, Finish Time: 88.53
-Broker ID: 2, Finish Time: 100.65
-For Lambda: 0.6
-Broker ID: 1, Finish Time: 122.17
-Broker ID: 2, Finish Time: 121.1
-For Lambda: 0.7
 Broker ID: 1, Finish Time: 140.11
-Broker ID: 2, Finish Time: 132.32
+Broker ID: 2, Finish Time: 143.99
+For Lambda: 0.2
+Broker ID: 1, Finish Time: 120.99
+Broker ID: 2, Finish Time: 116.33
+For Lambda: 0.3
+Broker ID: 1, Finish Time: 100.55
+Broker ID: 2, Finish Time: 99.55
+For Lambda: 0.4
+Broker ID: 1, Finish Time: 79.55
+Broker ID: 2, Finish Time: 81.33
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 101.44
+Broker ID: 2, Finish Time: 100.44
+For Lambda: 0.6
+Broker ID: 1, Finish Time: 120.09
+Broker ID: 2, Finish Time: 121.09
+For Lambda: 0.7
+Broker ID: 1, Finish Time: 148.33
+Broker ID: 2, Finish Time: 130.32
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 166.55
-Broker ID: 2, Finish Time: 163.33
+Broker ID: 1, Finish Time: 161.97
+Broker ID: 2, Finish Time: 171.18
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 183.11
-Broker ID: 2, Finish Time: 195.88
+Broker ID: 1, Finish Time: 192.11
+Broker ID: 2, Finish Time: 189.33
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 210.55
-Broker ID: 2, Finish Time: 207.22
+Broker ID: 1, Finish Time: 208.0
+Broker ID: 2, Finish Time: 212.0
 
 Base Stations Properties 
 ------------------------------------------
@@ -102,38 +102,38 @@ Number of Stations: 15, Number of Hosts: 15, Number of Vms: 15, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 90.55
-Broker ID: 2, Finish Time: 91.55
+Broker ID: 1, Finish Time: 106.11
+Broker ID: 2, Finish Time: 92.77
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 88.11
-Broker ID: 2, Finish Time: 79.55
+Broker ID: 1, Finish Time: 79.55
+Broker ID: 2, Finish Time: 80.99
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 67.77
-Broker ID: 2, Finish Time: 67.77
+Broker ID: 1, Finish Time: 65.77
+Broker ID: 2, Finish Time: 71.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 58.77
-Broker ID: 2, Finish Time: 57.22
+Broker ID: 1, Finish Time: 59.99
+Broker ID: 2, Finish Time: 60.11
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 54.42
-Broker ID: 2, Finish Time: 58.42
+Broker ID: 1, Finish Time: 55.11
+Broker ID: 2, Finish Time: 57.44
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 64.42
-Broker ID: 2, Finish Time: 65.86
+Broker ID: 1, Finish Time: 66.64
+Broker ID: 2, Finish Time: 58.64
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 82.21
-Broker ID: 2, Finish Time: 80.88
+Broker ID: 1, Finish Time: 79.77
+Broker ID: 2, Finish Time: 72.77
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 96.22
-Broker ID: 2, Finish Time: 102.99
+Broker ID: 1, Finish Time: 94.43
+Broker ID: 2, Finish Time: 93.33
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 104.65
-Broker ID: 2, Finish Time: 113.66
+Broker ID: 1, Finish Time: 104.11
+Broker ID: 2, Finish Time: 111.87
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 121.55
-Broker ID: 2, Finish Time: 119.87
+Broker ID: 1, Finish Time: 130.32
+Broker ID: 2, Finish Time: 120.87
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 134.56
-Broker ID: 2, Finish Time: 138.1
+Broker ID: 1, Finish Time: 138.54
+Broker ID: 2, Finish Time: 139.54
 
 Base Stations Properties 
 ------------------------------------------
@@ -146,38 +146,38 @@ Number of Stations: 20, Number of Hosts: 20, Number of Vms: 20, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 65.21
-Broker ID: 2, Finish Time: 64.11
+Broker ID: 1, Finish Time: 61.76
+Broker ID: 2, Finish Time: 66.76
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 55.55
-Broker ID: 2, Finish Time: 55.55
+Broker ID: 1, Finish Time: 57.11
+Broker ID: 2, Finish Time: 52.55
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 44.66
-Broker ID: 2, Finish Time: 46.99
+Broker ID: 1, Finish Time: 50.99
+Broker ID: 2, Finish Time: 45.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 39.0
-Broker ID: 2, Finish Time: 42.11
+Broker ID: 1, Finish Time: 39.44
+Broker ID: 2, Finish Time: 39.44
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 37.09
-Broker ID: 2, Finish Time: 42.98
+Broker ID: 1, Finish Time: 37.98
+Broker ID: 2, Finish Time: 45.09
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 62.2
-Broker ID: 2, Finish Time: 59.42
+Broker ID: 1, Finish Time: 49.2
+Broker ID: 2, Finish Time: 52.11
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 60.44
-Broker ID: 2, Finish Time: 67.66
+Broker ID: 1, Finish Time: 69.66
+Broker ID: 2, Finish Time: 61.33
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 72.88
-Broker ID: 2, Finish Time: 68.88
+Broker ID: 1, Finish Time: 71.88
+Broker ID: 2, Finish Time: 69.86
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 80.1
-Broker ID: 2, Finish Time: 81.99
+Broker ID: 1, Finish Time: 83.99
+Broker ID: 2, Finish Time: 77.88
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 95.22
-Broker ID: 2, Finish Time: 91.99
+Broker ID: 1, Finish Time: 97.22
+Broker ID: 2, Finish Time: 89.52
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 100.21
-Broker ID: 2, Finish Time: 104.33
+Broker ID: 1, Finish Time: 114.66
+Broker ID: 2, Finish Time: 105.44
 
 Base Stations Properties 
 ------------------------------------------
@@ -190,38 +190,38 @@ Number of Stations: 25, Number of Hosts: 25, Number of Vms: 25, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 46.11
-Broker ID: 2, Finish Time: 46.43
+Broker ID: 1, Finish Time: 50.99
+Broker ID: 2, Finish Time: 50.33
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 38.65
-Broker ID: 2, Finish Time: 43.11
+Broker ID: 1, Finish Time: 41.64
+Broker ID: 2, Finish Time: 46.55
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 34.65
-Broker ID: 2, Finish Time: 37.11
+Broker ID: 1, Finish Time: 37.1
+Broker ID: 2, Finish Time: 34.46
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 32.76
-Broker ID: 2, Finish Time: 30.65
+Broker ID: 1, Finish Time: 35.31
+Broker ID: 2, Finish Time: 29.76
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 38.65
-Broker ID: 2, Finish Time: 37.76
+Broker ID: 1, Finish Time: 36.76
+Broker ID: 2, Finish Time: 32.87
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 41.76
-Broker ID: 2, Finish Time: 42.98
+Broker ID: 1, Finish Time: 45.0
+Broker ID: 2, Finish Time: 45.09
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 42.98
-Broker ID: 2, Finish Time: 51.31
+Broker ID: 1, Finish Time: 58.31
+Broker ID: 2, Finish Time: 47.22
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 59.64
-Broker ID: 2, Finish Time: 56.42
+Broker ID: 1, Finish Time: 58.11
+Broker ID: 2, Finish Time: 63.66
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 68.66
-Broker ID: 2, Finish Time: 70.66
+Broker ID: 1, Finish Time: 62.66
+Broker ID: 2, Finish Time: 62.42
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 72.88
-Broker ID: 2, Finish Time: 71.66
+Broker ID: 1, Finish Time: 74.86
+Broker ID: 2, Finish Time: 73.66
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 86.99
-Broker ID: 2, Finish Time: 85.99
+Broker ID: 1, Finish Time: 83.0
+Broker ID: 2, Finish Time: 84.1
 
 Base Stations Properties 
 ------------------------------------------
@@ -234,38 +234,38 @@ Number of Stations: 30, Number of Hosts: 30, Number of Vms: 30, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 39.43
-Broker ID: 2, Finish Time: 39.21
+Broker ID: 1, Finish Time: 32.32
+Broker ID: 2, Finish Time: 37.33
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 32.33
-Broker ID: 2, Finish Time: 33.65
+Broker ID: 1, Finish Time: 33.42
+Broker ID: 2, Finish Time: 32.3
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 33.33
-Broker ID: 2, Finish Time: 25.33
+Broker ID: 1, Finish Time: 30.22
+Broker ID: 2, Finish Time: 28.0
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 26.65
-Broker ID: 2, Finish Time: 24.09
+Broker ID: 1, Finish Time: 27.43
+Broker ID: 2, Finish Time: 25.65
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 34.54
-Broker ID: 2, Finish Time: 30.76
+Broker ID: 1, Finish Time: 28.87
+Broker ID: 2, Finish Time: 28.54
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 36.76
-Broker ID: 2, Finish Time: 41.98
+Broker ID: 1, Finish Time: 42.98
+Broker ID: 2, Finish Time: 31.87
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 45.22
-Broker ID: 2, Finish Time: 41.98
+Broker ID: 1, Finish Time: 44.87
+Broker ID: 2, Finish Time: 42.98
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 47.22
-Broker ID: 2, Finish Time: 51.22
+Broker ID: 1, Finish Time: 45.0
+Broker ID: 2, Finish Time: 48.98
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 56.42
-Broker ID: 2, Finish Time: 60.44
+Broker ID: 1, Finish Time: 60.11
+Broker ID: 2, Finish Time: 54.22
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 59.44
-Broker ID: 2, Finish Time: 62.11
+Broker ID: 1, Finish Time: 70.64
+Broker ID: 2, Finish Time: 58.42
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 64.44
-Broker ID: 2, Finish Time: 64.55
+Broker ID: 1, Finish Time: 67.88
+Broker ID: 2, Finish Time: 65.66
 
 Base Stations Properties 
 ------------------------------------------
@@ -278,38 +278,38 @@ Number of Stations: 35, Number of Hosts: 35, Number of Vms: 35, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 29.65
-Broker ID: 2, Finish Time: 30.87
+Broker ID: 1, Finish Time: 30.98
+Broker ID: 2, Finish Time: 28.77
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 29.65
-Broker ID: 2, Finish Time: 27.09
+Broker ID: 1, Finish Time: 27.0
+Broker ID: 2, Finish Time: 27.77
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 20.99
-Broker ID: 2, Finish Time: 22.77
+Broker ID: 1, Finish Time: 23.65
+Broker ID: 2, Finish Time: 21.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 20.32
-Broker ID: 2, Finish Time: 26.54
+Broker ID: 1, Finish Time: 28.65
+Broker ID: 2, Finish Time: 27.65
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 29.54
-Broker ID: 2, Finish Time: 25.54
+Broker ID: 1, Finish Time: 27.32
+Broker ID: 2, Finish Time: 29.65
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 31.87
-Broker ID: 2, Finish Time: 37.65
+Broker ID: 1, Finish Time: 36.65
+Broker ID: 2, Finish Time: 34.65
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 39.09
-Broker ID: 2, Finish Time: 35.87
+Broker ID: 1, Finish Time: 40.09
+Broker ID: 2, Finish Time: 45.09
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 37.76
-Broker ID: 2, Finish Time: 40.09
+Broker ID: 1, Finish Time: 43.98
+Broker ID: 2, Finish Time: 43.98
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 46.22
-Broker ID: 2, Finish Time: 54.98
+Broker ID: 1, Finish Time: 55.11
+Broker ID: 2, Finish Time: 48.0
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 54.22
-Broker ID: 2, Finish Time: 55.42
+Broker ID: 1, Finish Time: 60.42
+Broker ID: 2, Finish Time: 56.42
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 72.66
-Broker ID: 2, Finish Time: 64.42
+Broker ID: 1, Finish Time: 62.44
+Broker ID: 2, Finish Time: 55.42
 
 Base Stations Properties 
 ------------------------------------------
@@ -322,38 +322,38 @@ Number of Stations: 40, Number of Hosts: 40, Number of Vms: 40, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 26.11
-Broker ID: 2, Finish Time: 28.65
+Broker ID: 1, Finish Time: 24.65
+Broker ID: 2, Finish Time: 26.99
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 27.43
-Broker ID: 2, Finish Time: 22.22
+Broker ID: 1, Finish Time: 26.84
+Broker ID: 2, Finish Time: 23.99
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 22.75
-Broker ID: 2, Finish Time: 20.32
+Broker ID: 1, Finish Time: 19.76
+Broker ID: 2, Finish Time: 19.32
 For Lambda: 0.3
 Broker ID: 1, Finish Time: 20.32
-Broker ID: 2, Finish Time: 20.32
+Broker ID: 2, Finish Time: 20.43
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 27.65
-Broker ID: 2, Finish Time: 28.54
+Broker ID: 1, Finish Time: 28.54
+Broker ID: 2, Finish Time: 30.54
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 36.76
-Broker ID: 2, Finish Time: 38.76
+Broker ID: 1, Finish Time: 28.54
+Broker ID: 2, Finish Time: 37.76
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 36.76
-Broker ID: 2, Finish Time: 35.54
+Broker ID: 1, Finish Time: 34.76
+Broker ID: 2, Finish Time: 32.54
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 43.98
-Broker ID: 2, Finish Time: 46.09
+Broker ID: 1, Finish Time: 38.09
+Broker ID: 2, Finish Time: 42.87
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 43.09
-Broker ID: 2, Finish Time: 40.0
+Broker ID: 1, Finish Time: 46.98
+Broker ID: 2, Finish Time: 42.98
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 49.2
-Broker ID: 2, Finish Time: 51.98
+Broker ID: 1, Finish Time: 48.22
+Broker ID: 2, Finish Time: 45.2
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 52.22
-Broker ID: 2, Finish Time: 55.98
+Broker ID: 1, Finish Time: 60.42
+Broker ID: 2, Finish Time: 55.44
 
 Base Stations Properties 
 ------------------------------------------
@@ -366,38 +366,38 @@ Number of Stations: 45, Number of Hosts: 45, Number of Vms: 45, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 22.33
-Broker ID: 2, Finish Time: 24.65
+Broker ID: 1, Finish Time: 22.99
+Broker ID: 2, Finish Time: 20.29
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 16.77
-Broker ID: 2, Finish Time: 17.77
+Broker ID: 1, Finish Time: 18.96
+Broker ID: 2, Finish Time: 16.21
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 19.65
-Broker ID: 2, Finish Time: 18.21
+Broker ID: 1, Finish Time: 16.44
+Broker ID: 2, Finish Time: 17.32
 For Lambda: 0.3
 Broker ID: 1, Finish Time: 20.32
-Broker ID: 2, Finish Time: 20.32
+Broker ID: 2, Finish Time: 20.21
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 27.65
-Broker ID: 2, Finish Time: 23.54
-For Lambda: 0.5
 Broker ID: 1, Finish Time: 28.65
-Broker ID: 2, Finish Time: 29.43
+Broker ID: 2, Finish Time: 26.54
+For Lambda: 0.5
+Broker ID: 1, Finish Time: 28.54
+Broker ID: 2, Finish Time: 28.54
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 31.76
-Broker ID: 2, Finish Time: 35.76
+Broker ID: 1, Finish Time: 33.76
+Broker ID: 2, Finish Time: 32.87
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 36.76
-Broker ID: 2, Finish Time: 32.76
+Broker ID: 1, Finish Time: 34.76
+Broker ID: 2, Finish Time: 36.76
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 38.76
-Broker ID: 2, Finish Time: 46.98
+Broker ID: 1, Finish Time: 44.09
+Broker ID: 2, Finish Time: 41.09
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 41.98
-Broker ID: 2, Finish Time: 40.98
+Broker ID: 1, Finish Time: 46.2
+Broker ID: 2, Finish Time: 45.22
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 47.09
-Broker ID: 2, Finish Time: 51.22
+Broker ID: 1, Finish Time: 48.22
+Broker ID: 2, Finish Time: 47.0
 
 Base Stations Properties 
 ------------------------------------------
@@ -410,38 +410,38 @@ Number of Stations: 50, Number of Hosts: 50, Number of Vms: 50, Mips for Host: 5
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 18.54
-Broker ID: 2, Finish Time: 19.65
+Broker ID: 1, Finish Time: 22.11
+Broker ID: 2, Finish Time: 21.1
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 18.66
-Broker ID: 2, Finish Time: 16.43
+Broker ID: 1, Finish Time: 17.08
+Broker ID: 2, Finish Time: 17.11
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 16.09
-Broker ID: 2, Finish Time: 17.52
+Broker ID: 1, Finish Time: 15.99
+Broker ID: 2, Finish Time: 17.54
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 20.43
+Broker ID: 1, Finish Time: 20.32
 Broker ID: 2, Finish Time: 20.32
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 20.21
+Broker ID: 1, Finish Time: 20.32
 Broker ID: 2, Finish Time: 20.32
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 27.65
-Broker ID: 2, Finish Time: 26.54
+Broker ID: 1, Finish Time: 28.65
+Broker ID: 2, Finish Time: 28.54
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 29.54
-Broker ID: 2, Finish Time: 30.43
+Broker ID: 1, Finish Time: 32.87
+Broker ID: 2, Finish Time: 29.65
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 30.76
-Broker ID: 2, Finish Time: 35.87
+Broker ID: 1, Finish Time: 33.76
+Broker ID: 2, Finish Time: 34.87
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 37.76
+Broker ID: 1, Finish Time: 35.76
 Broker ID: 2, Finish Time: 37.76
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 42.98
-Broker ID: 2, Finish Time: 43.09
+Broker ID: 1, Finish Time: 41.98
+Broker ID: 2, Finish Time: 48.98
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 46.09
-Broker ID: 2, Finish Time: 43.98
+Broker ID: 1, Finish Time: 45.98
+Broker ID: 2, Finish Time: 44.98
 
 Base Stations Properties 
 ------------------------------------------
@@ -454,38 +454,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 5000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 352.33
-Broker ID: 2, Finish Time: 355.55
+Broker ID: 1, Finish Time: 356.11
+Broker ID: 2, Finish Time: 361.55
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 314.11
-Broker ID: 2, Finish Time: 317.33
+Broker ID: 1, Finish Time: 313.33
+Broker ID: 2, Finish Time: 312.11
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 261.55
-Broker ID: 2, Finish Time: 280.55
+Broker ID: 1, Finish Time: 278.55
+Broker ID: 2, Finish Time: 281.11
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 224.99
-Broker ID: 2, Finish Time: 240.33
+Broker ID: 1, Finish Time: 235.55
+Broker ID: 2, Finish Time: 227.99
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 194.33
-Broker ID: 2, Finish Time: 191.11
+Broker ID: 1, Finish Time: 176.33
+Broker ID: 2, Finish Time: 184.11
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 200.22
-Broker ID: 2, Finish Time: 210.77
+Broker ID: 1, Finish Time: 213.0
+Broker ID: 2, Finish Time: 203.0
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 260.32
-Broker ID: 2, Finish Time: 266.77
+Broker ID: 1, Finish Time: 262.32
+Broker ID: 2, Finish Time: 242.88
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 303.11
-Broker ID: 2, Finish Time: 301.21
+Broker ID: 1, Finish Time: 319.33
+Broker ID: 2, Finish Time: 309.99
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 351.55
-Broker ID: 2, Finish Time: 353.99
+Broker ID: 1, Finish Time: 353.77
+Broker ID: 2, Finish Time: 368.99
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 394.77
-Broker ID: 2, Finish Time: 408.55
+Broker ID: 1, Finish Time: 393.21
+Broker ID: 2, Finish Time: 390.99
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 447.77
-Broker ID: 2, Finish Time: 434.55
+Broker ID: 1, Finish Time: 447.55
+Broker ID: 2, Finish Time: 445.77
 
 Base Stations Properties 
 ------------------------------------------
@@ -498,38 +498,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 1000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 167.66
-Broker ID: 2, Finish Time: 170.99
+Broker ID: 1, Finish Time: 169.77
+Broker ID: 2, Finish Time: 173.22
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 153.0
-Broker ID: 2, Finish Time: 148.22
+Broker ID: 1, Finish Time: 145.11
+Broker ID: 2, Finish Time: 145.33
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 129.88
-Broker ID: 2, Finish Time: 123.77
+Broker ID: 1, Finish Time: 126.44
+Broker ID: 2, Finish Time: 138.88
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 122.77
-Broker ID: 2, Finish Time: 113.55
+Broker ID: 1, Finish Time: 135.54
+Broker ID: 2, Finish Time: 132.53
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 176.12
-Broker ID: 2, Finish Time: 167.34
+Broker ID: 1, Finish Time: 160.55
+Broker ID: 2, Finish Time: 175.34
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 199.78
-Broker ID: 2, Finish Time: 207.55
+Broker ID: 1, Finish Time: 197.0
+Broker ID: 2, Finish Time: 216.32
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 271.76
-Broker ID: 2, Finish Time: 254.33
+Broker ID: 1, Finish Time: 235.99
+Broker ID: 2, Finish Time: 247.88
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 284.33
-Broker ID: 2, Finish Time: 309.55
+Broker ID: 1, Finish Time: 295.89
+Broker ID: 2, Finish Time: 295.77
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 355.55
-Broker ID: 2, Finish Time: 357.11
+Broker ID: 1, Finish Time: 336.77
+Broker ID: 2, Finish Time: 356.77
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 396.55
-Broker ID: 2, Finish Time: 396.55
+Broker ID: 1, Finish Time: 386.11
+Broker ID: 2, Finish Time: 410.55
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 441.11
-Broker ID: 2, Finish Time: 442.77
+Broker ID: 1, Finish Time: 448.77
+Broker ID: 2, Finish Time: 440.77
 
 Base Stations Properties 
 ------------------------------------------
@@ -542,38 +542,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 1500
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 104.55
-Broker ID: 2, Finish Time: 105.55
+Broker ID: 1, Finish Time: 102.99
+Broker ID: 2, Finish Time: 103.66
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 87.55
-Broker ID: 2, Finish Time: 98.54
+Broker ID: 1, Finish Time: 94.55
+Broker ID: 2, Finish Time: 92.66
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 85.3
-Broker ID: 2, Finish Time: 78.1
+Broker ID: 1, Finish Time: 76.99
+Broker ID: 2, Finish Time: 75.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 99.88
-Broker ID: 2, Finish Time: 113.09
+Broker ID: 1, Finish Time: 128.77
+Broker ID: 2, Finish Time: 119.55
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 183.99
-Broker ID: 2, Finish Time: 165.12
+Broker ID: 1, Finish Time: 166.34
+Broker ID: 2, Finish Time: 156.9
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 206.22
-Broker ID: 2, Finish Time: 222.99
+Broker ID: 1, Finish Time: 197.33
+Broker ID: 2, Finish Time: 196.33
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 245.55
-Broker ID: 2, Finish Time: 252.77
+Broker ID: 1, Finish Time: 234.11
+Broker ID: 2, Finish Time: 263.32
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 304.33
-Broker ID: 2, Finish Time: 300.2
+Broker ID: 1, Finish Time: 308.55
+Broker ID: 2, Finish Time: 301.55
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 343.77
-Broker ID: 2, Finish Time: 347.77
+Broker ID: 1, Finish Time: 332.33
+Broker ID: 2, Finish Time: 340.33
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 392.55
-Broker ID: 2, Finish Time: 399.33
+Broker ID: 1, Finish Time: 390.89
+Broker ID: 2, Finish Time: 393.21
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 440.55
-Broker ID: 2, Finish Time: 448.33
+Broker ID: 1, Finish Time: 464.77
+Broker ID: 2, Finish Time: 457.33
 
 Base Stations Properties 
 ------------------------------------------
@@ -586,38 +586,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 2000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 76.94
-Broker ID: 2, Finish Time: 82.94
+Broker ID: 1, Finish Time: 80.22
+Broker ID: 2, Finish Time: 76.94
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 70.61
-Broker ID: 2, Finish Time: 64.22
+Broker ID: 1, Finish Time: 67.61
+Broker ID: 2, Finish Time: 68.22
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 80.0
-Broker ID: 2, Finish Time: 69.86
+Broker ID: 1, Finish Time: 65.86
+Broker ID: 2, Finish Time: 83.0
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 117.87
-Broker ID: 2, Finish Time: 115.12
+Broker ID: 1, Finish Time: 123.1
+Broker ID: 2, Finish Time: 100.66
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 171.34
-Broker ID: 2, Finish Time: 147.9
+Broker ID: 1, Finish Time: 153.33
+Broker ID: 2, Finish Time: 162.55
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 199.0
-Broker ID: 2, Finish Time: 211.77
+Broker ID: 1, Finish Time: 216.22
+Broker ID: 2, Finish Time: 218.44
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 252.32
-Broker ID: 2, Finish Time: 274.99
+Broker ID: 1, Finish Time: 240.88
+Broker ID: 2, Finish Time: 248.77
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 306.11
-Broker ID: 2, Finish Time: 306.55
+Broker ID: 1, Finish Time: 294.33
+Broker ID: 2, Finish Time: 310.55
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 336.55
-Broker ID: 2, Finish Time: 351.33
+Broker ID: 1, Finish Time: 347.33
+Broker ID: 2, Finish Time: 346.55
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 396.77
-Broker ID: 2, Finish Time: 391.33
+Broker ID: 1, Finish Time: 410.55
+Broker ID: 2, Finish Time: 386.77
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 436.77
-Broker ID: 2, Finish Time: 444.33
+Broker ID: 1, Finish Time: 443.77
+Broker ID: 2, Finish Time: 434.33
 
 Base Stations Properties 
 ------------------------------------------
@@ -630,38 +630,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 2500
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 57.89
-Broker ID: 2, Finish Time: 58.83
+Broker ID: 1, Finish Time: 59.17
+Broker ID: 2, Finish Time: 59.85
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 48.79
-Broker ID: 2, Finish Time: 50.63
+Broker ID: 1, Finish Time: 49.32
+Broker ID: 2, Finish Time: 47.61
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 87.11
-Broker ID: 2, Finish Time: 75.88
+Broker ID: 1, Finish Time: 84.09
+Broker ID: 2, Finish Time: 71.77
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 130.09
-Broker ID: 2, Finish Time: 113.1
+Broker ID: 1, Finish Time: 110.55
+Broker ID: 2, Finish Time: 116.12
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 161.0
-Broker ID: 2, Finish Time: 173.77
+Broker ID: 1, Finish Time: 172.34
+Broker ID: 2, Finish Time: 167.12
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 202.55
-Broker ID: 2, Finish Time: 209.55
+Broker ID: 1, Finish Time: 198.55
+Broker ID: 2, Finish Time: 214.0
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 254.55
-Broker ID: 2, Finish Time: 265.32
+Broker ID: 1, Finish Time: 262.1
+Broker ID: 2, Finish Time: 256.89
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 315.99
-Broker ID: 2, Finish Time: 298.98
+Broker ID: 1, Finish Time: 314.99
+Broker ID: 2, Finish Time: 293.55
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 342.33
-Broker ID: 2, Finish Time: 346.21
+Broker ID: 1, Finish Time: 356.55
+Broker ID: 2, Finish Time: 383.77
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 401.55
-Broker ID: 2, Finish Time: 406.99
+Broker ID: 1, Finish Time: 396.77
+Broker ID: 2, Finish Time: 402.55
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 445.77
-Broker ID: 2, Finish Time: 443.55
+Broker ID: 1, Finish Time: 458.33
+Broker ID: 2, Finish Time: 444.77
 
 Base Stations Properties 
 ------------------------------------------
@@ -674,38 +674,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 3000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 48.65
-Broker ID: 2, Finish Time: 51.1
+Broker ID: 1, Finish Time: 50.0
+Broker ID: 2, Finish Time: 46.44
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 38.7
-Broker ID: 2, Finish Time: 43.22
+Broker ID: 1, Finish Time: 40.14
+Broker ID: 2, Finish Time: 41.1
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 79.88
-Broker ID: 2, Finish Time: 77.0
+Broker ID: 1, Finish Time: 92.3
+Broker ID: 2, Finish Time: 82.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 118.87
-Broker ID: 2, Finish Time: 112.09
+Broker ID: 1, Finish Time: 114.66
+Broker ID: 2, Finish Time: 112.88
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 158.55
-Broker ID: 2, Finish Time: 177.56
+Broker ID: 1, Finish Time: 167.0
+Broker ID: 2, Finish Time: 162.18
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 210.55
-Broker ID: 2, Finish Time: 200.0
+Broker ID: 1, Finish Time: 210.89
+Broker ID: 2, Finish Time: 204.55
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 270.11
-Broker ID: 2, Finish Time: 250.33
+Broker ID: 1, Finish Time: 266.33
+Broker ID: 2, Finish Time: 247.32
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 301.33
-Broker ID: 2, Finish Time: 303.55
+Broker ID: 1, Finish Time: 299.55
+Broker ID: 2, Finish Time: 290.77
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 338.89
-Broker ID: 2, Finish Time: 352.55
+Broker ID: 1, Finish Time: 349.77
+Broker ID: 2, Finish Time: 344.55
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 373.11
-Broker ID: 2, Finish Time: 393.77
+Broker ID: 1, Finish Time: 396.55
+Broker ID: 2, Finish Time: 391.33
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 447.55
-Broker ID: 2, Finish Time: 450.99
+Broker ID: 1, Finish Time: 446.33
+Broker ID: 2, Finish Time: 446.55
 
 Base Stations Properties 
 ------------------------------------------
@@ -718,38 +718,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 3500
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 41.58
-Broker ID: 2, Finish Time: 44.79
+Broker ID: 1, Finish Time: 44.19
+Broker ID: 2, Finish Time: 40.98
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 38.98
-Broker ID: 2, Finish Time: 36.4
+Broker ID: 1, Finish Time: 36.79
+Broker ID: 2, Finish Time: 36.58
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 72.99
-Broker ID: 2, Finish Time: 76.0
+Broker ID: 1, Finish Time: 85.1
+Broker ID: 2, Finish Time: 66.0
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 119.31
-Broker ID: 2, Finish Time: 107.1
+Broker ID: 1, Finish Time: 115.87
+Broker ID: 2, Finish Time: 127.09
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 164.12
-Broker ID: 2, Finish Time: 180.4
+Broker ID: 1, Finish Time: 158.18
+Broker ID: 2, Finish Time: 153.55
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 214.77
-Broker ID: 2, Finish Time: 193.56
+Broker ID: 1, Finish Time: 210.55
+Broker ID: 2, Finish Time: 214.22
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 268.99
-Broker ID: 2, Finish Time: 255.55
+Broker ID: 1, Finish Time: 268.11
+Broker ID: 2, Finish Time: 238.76
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 298.55
-Broker ID: 2, Finish Time: 295.55
+Broker ID: 1, Finish Time: 293.77
+Broker ID: 2, Finish Time: 317.99
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 350.89
-Broker ID: 2, Finish Time: 356.55
+Broker ID: 1, Finish Time: 367.55
+Broker ID: 2, Finish Time: 344.11
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 422.99
-Broker ID: 2, Finish Time: 400.33
+Broker ID: 1, Finish Time: 387.11
+Broker ID: 2, Finish Time: 393.33
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 439.89
-Broker ID: 2, Finish Time: 457.11
+Broker ID: 1, Finish Time: 442.77
+Broker ID: 2, Finish Time: 443.55
 
 Base Stations Properties 
 ------------------------------------------
@@ -762,38 +762,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 4000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 31.6
-Broker ID: 2, Finish Time: 36.04
+Broker ID: 1, Finish Time: 35.57
+Broker ID: 2, Finish Time: 35.25
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 52.22
-Broker ID: 2, Finish Time: 38.98
+Broker ID: 1, Finish Time: 30.54
+Broker ID: 2, Finish Time: 37.98
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 71.08
-Broker ID: 2, Finish Time: 82.77
+Broker ID: 1, Finish Time: 75.0
+Broker ID: 2, Finish Time: 83.1
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 118.09
-Broker ID: 2, Finish Time: 138.31
+Broker ID: 1, Finish Time: 120.1
+Broker ID: 2, Finish Time: 107.33
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 159.12
-Broker ID: 2, Finish Time: 173.77
+Broker ID: 1, Finish Time: 178.77
+Broker ID: 2, Finish Time: 159.0
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 216.22
-Broker ID: 2, Finish Time: 203.78
+Broker ID: 1, Finish Time: 182.11
+Broker ID: 2, Finish Time: 215.22
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 251.88
-Broker ID: 2, Finish Time: 253.1
+Broker ID: 1, Finish Time: 264.32
+Broker ID: 2, Finish Time: 265.99
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 295.55
-Broker ID: 2, Finish Time: 290.2
+Broker ID: 1, Finish Time: 300.33
+Broker ID: 2, Finish Time: 300.33
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 335.99
-Broker ID: 2, Finish Time: 343.33
+Broker ID: 1, Finish Time: 345.89
+Broker ID: 2, Finish Time: 354.55
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 399.55
-Broker ID: 2, Finish Time: 405.33
+Broker ID: 1, Finish Time: 405.99
+Broker ID: 2, Finish Time: 400.55
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 447.77
-Broker ID: 2, Finish Time: 448.77
+Broker ID: 1, Finish Time: 454.77
+Broker ID: 2, Finish Time: 443.77
 
 Base Stations Properties 
 ------------------------------------------
@@ -806,38 +806,38 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 4500
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 38.6
-Broker ID: 2, Finish Time: 35.33
+Broker ID: 1, Finish Time: 34.45
+Broker ID: 2, Finish Time: 35.1
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 40.2
-Broker ID: 2, Finish Time: 34.76
+Broker ID: 1, Finish Time: 40.76
+Broker ID: 2, Finish Time: 36.76
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 86.1
-Broker ID: 2, Finish Time: 77.86
+Broker ID: 1, Finish Time: 61.88
+Broker ID: 2, Finish Time: 74.99
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 127.31
-Broker ID: 2, Finish Time: 125.34
+Broker ID: 1, Finish Time: 121.1
+Broker ID: 2, Finish Time: 111.87
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 171.34
-Broker ID: 2, Finish Time: 160.33
+Broker ID: 1, Finish Time: 153.33
+Broker ID: 2, Finish Time: 159.9
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 203.77
-Broker ID: 2, Finish Time: 222.77
+Broker ID: 1, Finish Time: 212.66
+Broker ID: 2, Finish Time: 204.78
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 255.99
-Broker ID: 2, Finish Time: 252.33
+Broker ID: 1, Finish Time: 262.1
+Broker ID: 2, Finish Time: 253.32
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 316.55
-Broker ID: 2, Finish Time: 304.55
+Broker ID: 1, Finish Time: 303.99
+Broker ID: 2, Finish Time: 294.11
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 349.55
-Broker ID: 2, Finish Time: 343.33
+Broker ID: 1, Finish Time: 337.77
+Broker ID: 2, Finish Time: 348.33
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 401.55
-Broker ID: 2, Finish Time: 390.33
+Broker ID: 1, Finish Time: 399.33
+Broker ID: 2, Finish Time: 389.77
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 459.77
-Broker ID: 2, Finish Time: 446.55
+Broker ID: 1, Finish Time: 448.77
+Broker ID: 2, Finish Time: 453.99
 
 Base Stations Properties 
 ------------------------------------------
@@ -850,35 +850,35 @@ Number of Stations: 5, Number of Hosts: 5, Number of Vms: 5, Mips for Host: 5000
 Lambda Results 
 ------------------------------------------
 For Lambda: 0.0
-Broker ID: 1, Finish Time: 27.93
-Broker ID: 2, Finish Time: 28.93
+Broker ID: 1, Finish Time: 28.31
+Broker ID: 2, Finish Time: 27.62
 For Lambda: 0.1
-Broker ID: 1, Finish Time: 34.54
-Broker ID: 2, Finish Time: 41.09
+Broker ID: 1, Finish Time: 35.09
+Broker ID: 2, Finish Time: 35.0
 For Lambda: 0.2
-Broker ID: 1, Finish Time: 83.31
-Broker ID: 2, Finish Time: 80.0
+Broker ID: 1, Finish Time: 62.99
+Broker ID: 2, Finish Time: 80.55
 For Lambda: 0.3
-Broker ID: 1, Finish Time: 114.66
-Broker ID: 2, Finish Time: 128.1
+Broker ID: 1, Finish Time: 129.32
+Broker ID: 2, Finish Time: 127.87
 For Lambda: 0.4
-Broker ID: 1, Finish Time: 169.55
-Broker ID: 2, Finish Time: 173.55
+Broker ID: 1, Finish Time: 160.18
+Broker ID: 2, Finish Time: 171.18
 For Lambda: 0.5
-Broker ID: 1, Finish Time: 193.55
-Broker ID: 2, Finish Time: 209.77
+Broker ID: 1, Finish Time: 186.33
+Broker ID: 2, Finish Time: 220.44
 For Lambda: 0.6
-Broker ID: 1, Finish Time: 251.1
-Broker ID: 2, Finish Time: 250.55
+Broker ID: 1, Finish Time: 250.1
+Broker ID: 2, Finish Time: 273.11
 For Lambda: 0.7
-Broker ID: 1, Finish Time: 303.55
-Broker ID: 2, Finish Time: 293.55
+Broker ID: 1, Finish Time: 308.99
+Broker ID: 2, Finish Time: 295.55
 For Lambda: 0.8
-Broker ID: 1, Finish Time: 361.77
-Broker ID: 2, Finish Time: 360.33
+Broker ID: 1, Finish Time: 352.33
+Broker ID: 2, Finish Time: 354.77
 For Lambda: 0.9
-Broker ID: 1, Finish Time: 399.77
-Broker ID: 2, Finish Time: 395.33
+Broker ID: 1, Finish Time: 403.99
+Broker ID: 2, Finish Time: 396.33
 For Lambda: 1.0
-Broker ID: 1, Finish Time: 432.55
-Broker ID: 2, Finish Time: 442.99
+Broker ID: 1, Finish Time: 436.77
+Broker ID: 2, Finish Time: 449.55

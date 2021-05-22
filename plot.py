@@ -1,7 +1,4 @@
-from mpl_toolkits import mplot3d
 import numpy as np
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
@@ -133,7 +130,7 @@ for i in range(0, Number_of_Tests):
             Ram_for_Vm_HAPS = int(temp_array[9])
             BW_for_Vm_HAPS = int(temp_array[10])
             currentIndex += 1
-            #print(temp)
+            # print(temp)
         else:
             lambdaFactor = float(0)
             for m in range(0, 11):
@@ -144,20 +141,20 @@ for i in range(0, Number_of_Tests):
                 sum /= Number_of_Brokers
                 sum_with_wrapping = float("{:.2f}".format(sum))
                 power_factor = float(BW_for_Vm_HAPS) / float(BW_for_Vm_BASE)
-                if i < (Number_of_Tests/2):
+                if i < (Number_of_Tests / 2):
                     points[i][m] = [sum_with_wrapping, lambdaFactor, Number_of_Stations_BASE]
                 else:
                     points[i][m] = [sum_with_wrapping, lambdaFactor, power_factor]
                 lambdaFactor += 0.1
                 lambdaFactor = sum_with_wrapping = float("{:.1f}".format(lambdaFactor))
 
-xdataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
-ydataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
-zdataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
+xdataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
+ydataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
+zdataFirstTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
 
-xdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
-ydataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
-zdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests/2))]
+xdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
+ydataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
+zdataSecondTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests / 2))]
 
 xdataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
 ydataThirdTest = [[0 for x in range(11)] for y in range(int(Number_of_Tests_Energy))]
@@ -184,14 +181,14 @@ for i in range(0, Number_of_Tests_Energy_Power):
 for i in range(0, Number_of_Tests):
     for j in range(0, 11):
         point = points[i][j]
-        if i < Number_of_Tests/2:
+        if i < Number_of_Tests / 2:
             xdataFirstTest[i][j] = point[0]
             ydataFirstTest[i][j] = point[1]
             zdataFirstTest[i][j] = point[2]
         else:
-            xdataSecondTest[i-10][j] = point[0]
-            ydataSecondTest[i-10][j] = point[1]
-            zdataSecondTest[i-10][j] = point[2]
+            xdataSecondTest[i - 10][j] = point[0]
+            ydataSecondTest[i - 10][j] = point[1]
+            zdataSecondTest[i - 10][j] = point[2]
 
 # fig1 = plt.figure(1)
 # ax1 = fig1.add_subplot(111, projection='3d')
@@ -225,84 +222,173 @@ for i in range(0, Number_of_Tests):
 #
 # plt.show()
 
+import plotly.graph_objects as go
+from plotly.validators.scatter.marker import SymbolValidator
+from plotly.graph_objs import *
 
-fig = go.Figure()
-for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter3d(x=ydataFirstTest[i], y=xdataFirstTest[i], z=zdataFirstTest[i],
-                               mode='lines+markers'))
-fig.update_layout(
-    title_text="1: X_Lambda, Y_Time, Z_Number of Base",
-    width=1800,
-)
-fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i],
-                             mode='lines+markers'))
-fig.update_layout(
-    title_text="1 2d: X_Lambda, Y_Time, Z_Number of Base",
-    width=1800,
-)
-fig.show()
+raw_symbols = SymbolValidator().values
+namestems = []
+namevariants = []
+symbols = []
 
+for i in range(0, len(raw_symbols), 3):
+    name = raw_symbols[i + 2]
+    symbols.append(raw_symbols[i])
+    namestems.append(name.replace("-open", "").replace("-dot", ""))
+    namevariants.append(name[len(namestems[-1]):])
+
+# fig = go.Figure()
+# for i in range(0, int(Number_of_Tests/2)):
+#     fig.add_trace(go.Scatter3d(x=ydataFirstTest[i], y=xdataFirstTest[i], z=zdataFirstTest[i],
+#                                mode='lines+markers'))
+# fig.update_layout(
+#     title_text="1: X_Lambda, Y_Time, Z_Number of Base (Both Number of base and haps increased)",
+#     width=1800,
+# )
+# fig.show()
 #######################
+fig = go.Figure()
+for i in range(0, int(Number_of_Tests / 2)):
+    if i == 0 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="circle",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dash')
+
+                                 ))
+    if i == 1 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-open",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dashdot')
+
+                                 ))
+    if i == 4 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="square-open-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dot')
+
+                                 ))
+    if i == 9:
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataFirstTest[i], y=xdataFirstTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='longdash')
+
+                                 ))
+
+fig.update_layout(title="Figure Title",
+                  template="none")
+fig.update_xaxes(autorange="reversed")
+
+fig.update_layout(
+    title_text="1 2d: X_Lambda, Y_Time, Z_Number of Base (Both Number of base and haps increased)",
+    width=900,
+    yaxis_title='Finish Time (second) ',
+    xaxis_title='Lambda Value',
+    # xaxis_color='plum'
+)
+fig.show()
+#
+# #######################
+# fig = go.Figure()
+# for i in range(0, int(Number_of_Tests/2)):
+#     fig.add_trace(go.Scatter3d(x=ydataSecondTest[i], y=xdataSecondTest[i], z=zdataSecondTest[i],
+#                                mode='lines+markers'))
+# fig.update_layout(
+#     title_text="2: X_Lambda, Y_Time, Z_HAPS/BASE Power (Only power of haps increased)",
+#     width=1800,
+# )
+# fig.show()
+# #######################
 fig = go.Figure()
 for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter3d(x=ydataSecondTest[i], y=xdataSecondTest[i], z=zdataSecondTest[i],
-                               mode='lines+markers'))
+
+    if i == 0 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="circle",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dash')
+
+                                 ))
+    if i == 1 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-open",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dashdot')
+
+                                 ))
+    if i == 4 :
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="square-open-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dot')
+
+                                 ))
+    if i == 9:
+        name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='longdash')
+
+                                 ))
 fig.update_layout(
-    title_text="2: X_Lambda, Y_Time, Z_HAPS/BASE Power",
-    width=1800,
+    title_text="2 2d: X_Lambda, Y_Time, Z_HAPS/BASE Power (Only power of haps increased)",
+    width=900,
+    yaxis_title='Finish Time (second) ',
+    xaxis_title='Lambda Value',
 )
+
+fig.update_layout(template="none")
+fig.update_xaxes(autorange="reversed")
+
 fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter(x=ydataSecondTest[i], y=xdataSecondTest[i],
-                             mode='lines+markers'))
-fig.update_layout(
-    title_text="2 2d: X_Lambda, Y_Time, Z_HAPS/BASE Power",
-    width=1800,
-)
-fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, Number_of_Tests_Energy):
-    fig.add_trace(go.Scatter3d(x=ydataThirdTest[i], y=xdataThirdTest[i], z=zdataThirdTest[i],
-                               mode='lines+markers'))
-fig.update_layout(
-    title_text="3: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
-)
-fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter(x=ydataThirdTest[i], y=xdataThirdTest[i],
-                             mode='lines+markers'))
-fig.update_layout(
-    title_text="3 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
-)
-fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, Number_of_Tests_Energy_Power):
-    fig.add_trace(go.Scatter3d(x=ydataFourthTest[i], y=xdataFourthTest[i], z=zdataFourthTest[i],
-                               mode='lines+markers'))
-fig.update_layout(
-    title_text="4: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
-)
-fig.show()
-#######################
-fig = go.Figure()
-for i in range(0, int(Number_of_Tests/2)):
-    fig.add_trace(go.Scatter(x=ydataFourthTest[i], y=xdataFourthTest[i],
-                             mode='lines+markers'))
-fig.update_layout(
-    title_text="4 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
-)
-fig.show()
+# #######################
+# fig = go.Figure()
+# for i in range(0, Number_of_Tests_Energy):
+#     fig.add_trace(go.Scatter3d(x=ydataThirdTest[i], y=xdataThirdTest[i], z=zdataThirdTest[i],
+#                                mode='lines+markers'))
+# fig.update_layout(
+#     title_text="3: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC (Only Haps power consumption per second increased)",
+#     width=1800,
+# )
+# fig.show()
+# #######################
+# fig = go.Figure()
+# for i in range(0, int(Number_of_Tests/2)):
+#     fig.add_trace(go.Scatter(x=ydataThirdTest[i], y=xdataThirdTest[i],
+#                              mode='lines+markers'))
+# fig.update_layout(
+#     title_text="3 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC (Only Haps power consumption per second increased)",
+#     width=1800,
+# )
+# fig.show()
+# #######################
+# fig = go.Figure()
+# for i in range(0, Number_of_Tests_Energy_Power):
+#     fig.add_trace(go.Scatter3d(x=ydataFourthTest[i], y=xdataFourthTest[i], z=zdataFourthTest[i],
+#                                mode='lines+markers'))
+# fig.update_layout(
+#     title_text="4: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC (Both Haps power consumption per second and haps power increased)",
+#     width=1800,
+# )
+# fig.show()
+# #######################
+# fig = go.Figure()
+# for i in range(0, int(Number_of_Tests/2)):
+#     fig.add_trace(go.Scatter(x=ydataFourthTest[i], y=xdataFourthTest[i],
+#                              mode='lines+markers'))
+# fig.update_layout(
+#     title_text="4 2d: X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC (Both Haps power consumption per second and haps power increased)",
+#     width=1800,
+# )
+# fig.show()

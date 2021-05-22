@@ -126,32 +126,88 @@ for i in range(0, Number_of_Tests):
         mean_y[i][j] = point[1]
         mean_z[i][j] = point[2]
 
+# fig = go.Figure()
+# for i in range(0, Number_of_Tests):
+#     fig.add_trace(go.Scatter3d(x=mean_y[i], y=mean_x[i], z=mean_z[i],
+#                                mode='lines+markers',
+#                                error_y=dict(
+#                                    type='data',
+#                                    array=std[i],
+#                                    visible=True)))
+# fig.update_layout(
+#     title_text="X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
+#     width=1800,
+# )
+# fig.show()
+#
+# ##########################################################################################################
+
 fig = go.Figure()
 for i in range(0, Number_of_Tests):
-    fig.add_trace(go.Scatter3d(x=mean_y[i], y=mean_x[i], z=mean_z[i],
-                               mode='lines+markers',
-                               error_y=dict(
-                                   type='data',
-                                   array=std[i],
-                                   visible=True)))
+    name = "HAPS / BS = " + str(i+1)
+    # fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i], name=name,
+    #                          mode='lines+markers',
+    #                          error_y=dict(
+    #                              type='data',
+    #                              array=std[i],
+    #                              visible=True)))
+    if i == 0 :
+        # name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i], name=name,
+                                 mode="lines+markers", marker_symbol="circle",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dash'),
+                                 error_y=dict(
+                                     type='data',
+                                     array=std[i],
+                                     visible=True)
+
+                                 ))
+    if i == 3 :
+        # name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-open",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dashdot'),
+                                 error_y=dict(
+                                     type='data',
+                                     array=std[i],
+                                     visible=True)
+
+                                 ))
+    if i == 5 :
+        # name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i], name=name,
+                                 mode="lines+markers", marker_symbol="square-open-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='dot'),
+                                 error_y=dict(
+                                     type='data',
+                                     array=std[i],
+                                     visible=True)
+
+                                 ))
+    if i == 11:
+        # name = "HAPS:" + str((i + 1) * 5) + ", BS:" + str((i + 1) * 20)
+        fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i], name=name,
+                                 mode="lines+markers", marker_symbol="diamond-dot",
+                                 marker=dict(color='#121111', size=8),
+                                 line=dict(color='#45403f', width=2, dash='longdash'),
+                                 error_y=dict(
+                                     type='data',
+                                     array=std[i],
+                                     visible=True)
+
+                                 ))
 fig.update_layout(
     title_text="X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
+    width=900,
+    yaxis_title='Energy Consumption (KWatt)',
+    xaxis_title='Lambda Value',
 )
-fig.show()
 
-##########################################################################################################
+fig.update_layout(template="none")
+fig.update_xaxes(autorange="reversed")
+fig.update_yaxes(range=[470, 1100], )
 
-fig = go.Figure()
-for i in range(0, Number_of_Tests):
-    fig.add_trace(go.Scatter(x=mean_y[i], y=mean_x[i],
-                             mode='lines+markers',
-                             error_y=dict(
-                                 type='data',
-                                 array=std[i],
-                                 visible=True)))
-fig.update_layout(
-    title_text="X_Lambda, Y_Total Energy Consumption In KWatt, Z_MAX_HAPS_POWER_KWATTS_SEC",
-    width=1800,
-)
 fig.show()
